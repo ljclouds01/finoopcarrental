@@ -218,16 +218,16 @@ Partial Class RegistrationForm
         Me.lblAlready.ForeColor = System.Drawing.Color.White
         Me.lblAlready.Location = New System.Drawing.Point(378, 556)
         Me.lblAlready.Name = "lblAlready"
-        Me.lblAlready.Size = New System.Drawing.Size(211, 23)
+        Me.lblAlready.Size = New System.Drawing.Size(221, 23)
         Me.lblAlready.TabIndex = 17
-        Me.lblAlready.Text = "Already have an account?"
+        Me.lblAlready.Text = "Already have an account?  "
         '
         'lnkLogin
         '
         Me.lnkLogin.AutoSize = True
         Me.lnkLogin.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnkLogin.LinkColor = System.Drawing.Color.Red
-        Me.lnkLogin.Location = New System.Drawing.Point(595, 556)
+        Me.lnkLogin.Location = New System.Drawing.Point(602, 556)
         Me.lnkLogin.Name = "lnkLogin"
         Me.lnkLogin.Size = New System.Drawing.Size(94, 23)
         Me.lnkLogin.TabIndex = 18

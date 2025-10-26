@@ -169,9 +169,9 @@ Partial Class LoginForm
         Me.lblDont.ForeColor = System.Drawing.Color.White
         Me.lblDont.Location = New System.Drawing.Point(80, 375)
         Me.lblDont.Name = "lblDont"
-        Me.lblDont.Size = New System.Drawing.Size(192, 23)
+        Me.lblDont.Size = New System.Drawing.Size(202, 23)
         Me.lblDont.TabIndex = 8
-        Me.lblDont.Text = "Don't have an account?"
+        Me.lblDont.Text = "Don't have an account?  "
         '
         'lnkRegister
         '
@@ -179,7 +179,7 @@ Partial Class LoginForm
         Me.lnkRegister.AutoSize = True
         Me.lnkRegister.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnkRegister.LinkColor = System.Drawing.Color.Red
-        Me.lnkRegister.Location = New System.Drawing.Point(269, 375)
+        Me.lnkRegister.Location = New System.Drawing.Point(293, 375)
         Me.lnkRegister.Name = "lnkRegister"
         Me.lnkRegister.Size = New System.Drawing.Size(72, 23)
         Me.lnkRegister.TabIndex = 9
