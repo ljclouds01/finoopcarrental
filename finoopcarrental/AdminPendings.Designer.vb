@@ -29,7 +29,7 @@ Partial Class AdminPendings
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(1379, 759)
+        Me.ClientSize = New System.Drawing.Size(1377, 763)
         Me.Name = "AdminPendings"
         Me.Text = "Pendings"
         Me.ResumeLayout(False)

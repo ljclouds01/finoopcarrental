@@ -29,7 +29,7 @@ Partial Class AdminDashboard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(1379, 760)
+        Me.ClientSize = New System.Drawing.Size(1377, 763)
         Me.Name = "AdminDashboard"
         Me.Text = "Dashboard"
         Me.ResumeLayout(False)
