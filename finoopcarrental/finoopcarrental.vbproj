@@ -125,6 +125,12 @@
     <Compile Include="UserDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserDashboardPage2.Designer.vb">
+      <DependentUpon>UserDashboardPage2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboardPage2.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminCA.resx">
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDashboardPage2.resx">
+      <DependentUpon>UserDashboardPage2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
