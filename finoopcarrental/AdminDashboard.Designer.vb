@@ -27,9 +27,9 @@ Partial Class AdminDashboard
         Me.pbxLogo = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCustomerAcc = New System.Windows.Forms.Button()
         Me.btnPending = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
         Me.pbProfile = New System.Windows.Forms.PictureBox()
         Me.lblAdminID = New System.Windows.Forms.Label()
@@ -72,9 +72,9 @@ Partial Class AdminDashboard
         Me.pnlSideBar.Controls.Add(Me.pbxLogo)
         Me.pnlSideBar.Controls.Add(Me.Label4)
         Me.pnlSideBar.Controls.Add(Me.Button2)
-        Me.pnlSideBar.Controls.Add(Me.Button1)
+        Me.pnlSideBar.Controls.Add(Me.btnCustomerAcc)
         Me.pnlSideBar.Controls.Add(Me.btnPending)
-        Me.pnlSideBar.Controls.Add(Me.Button4)
+        Me.pnlSideBar.Controls.Add(Me.btnLogout)
         Me.pnlSideBar.Controls.Add(Me.btnDashboard)
         Me.pnlSideBar.Controls.Add(Me.pbProfile)
         Me.pnlSideBar.Controls.Add(Me.lblAdminID)
@@ -122,19 +122,19 @@ Partial Class AdminDashboard
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnCustomerAcc
         '
-        Me.Button1.BackColor = System.Drawing.Color.Maroon
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 318)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(270, 54)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "  CUSTOMER'S ACCOUNT"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCustomerAcc.BackColor = System.Drawing.Color.Maroon
+        Me.btnCustomerAcc.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCustomerAcc.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCustomerAcc.ForeColor = System.Drawing.Color.White
+        Me.btnCustomerAcc.Location = New System.Drawing.Point(0, 318)
+        Me.btnCustomerAcc.Name = "btnCustomerAcc"
+        Me.btnCustomerAcc.Size = New System.Drawing.Size(270, 54)
+        Me.btnCustomerAcc.TabIndex = 17
+        Me.btnCustomerAcc.Text = "  CUSTOMER'S ACCOUNT"
+        Me.btnCustomerAcc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCustomerAcc.UseVisualStyleBackColor = False
         '
         'btnPending
         '
@@ -150,18 +150,18 @@ Partial Class AdminDashboard
         Me.btnPending.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPending.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnLogout
         '
-        Me.Button4.BackColor = System.Drawing.Color.Maroon
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(0, 564)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(270, 54)
-        Me.Button4.TabIndex = 15
-        Me.Button4.Text = "LOG OUT"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnLogout.BackColor = System.Drawing.Color.Maroon
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.Location = New System.Drawing.Point(0, 564)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(270, 54)
+        Me.btnLogout.TabIndex = 15
+        Me.btnLogout.Text = "LOG OUT"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'btnDashboard
         '
@@ -502,14 +502,14 @@ Partial Class AdminDashboard
     Friend WithEvents btnDashboard As Button
     Friend WithEvents btnAvailableCars As Button
     Friend WithEvents btnPending As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnLogout As Button
     Friend WithEvents pbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCustomerAcc As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel3 As Panel

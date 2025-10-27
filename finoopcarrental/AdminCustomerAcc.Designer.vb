@@ -29,11 +29,11 @@ Partial Class AdminCustomerAcc
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnPending = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
         Me.pbProfile = New System.Windows.Forms.PictureBox()
         Me.lblAdminID = New System.Windows.Forms.Label()
-        Me.pnlPending = New System.Windows.Forms.Panel()
+        Me.pnlCustomerAcc = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -47,7 +47,7 @@ Partial Class AdminCustomerAcc
         Me.pnlSideBar.SuspendLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlPending.SuspendLayout()
+        Me.pnlCustomerAcc.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,7 +61,7 @@ Partial Class AdminCustomerAcc
         Me.pnlSideBar.Controls.Add(Me.Button2)
         Me.pnlSideBar.Controls.Add(Me.Button1)
         Me.pnlSideBar.Controls.Add(Me.btnPending)
-        Me.pnlSideBar.Controls.Add(Me.Button4)
+        Me.pnlSideBar.Controls.Add(Me.btnLogout)
         Me.pnlSideBar.Controls.Add(Me.btnDashboard)
         Me.pnlSideBar.Controls.Add(Me.pbProfile)
         Me.pnlSideBar.Controls.Add(Me.lblAdminID)
@@ -87,6 +87,7 @@ Partial Class AdminCustomerAcc
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.Enabled = False
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(76, 30)
         Me.Label11.Name = "Label11"
@@ -136,18 +137,18 @@ Partial Class AdminCustomerAcc
         Me.btnPending.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPending.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnLogout
         '
-        Me.Button4.BackColor = System.Drawing.Color.Maroon
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(0, 564)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(270, 54)
-        Me.Button4.TabIndex = 15
-        Me.Button4.Text = "LOG OUT"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnLogout.BackColor = System.Drawing.Color.Maroon
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.Location = New System.Drawing.Point(0, 564)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(270, 54)
+        Me.btnLogout.TabIndex = 15
+        Me.btnLogout.Text = "LOG OUT"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'btnDashboard
         '
@@ -185,15 +186,15 @@ Partial Class AdminCustomerAcc
         Me.lblAdminID.TabIndex = 4
         Me.lblAdminID.Text = "ADMIN ID         "
         '
-        'pnlPending
+        'pnlCustomerAcc
         '
-        Me.pnlPending.BackColor = System.Drawing.Color.RosyBrown
-        Me.pnlPending.Controls.Add(Me.Panel1)
-        Me.pnlPending.Location = New System.Drawing.Point(288, 92)
-        Me.pnlPending.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlPending.Name = "pnlPending"
-        Me.pnlPending.Size = New System.Drawing.Size(725, 374)
-        Me.pnlPending.TabIndex = 13
+        Me.pnlCustomerAcc.BackColor = System.Drawing.Color.RosyBrown
+        Me.pnlCustomerAcc.Controls.Add(Me.Panel1)
+        Me.pnlCustomerAcc.Location = New System.Drawing.Point(288, 92)
+        Me.pnlCustomerAcc.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlCustomerAcc.Name = "pnlCustomerAcc"
+        Me.pnlCustomerAcc.Size = New System.Drawing.Size(725, 374)
+        Me.pnlCustomerAcc.TabIndex = 13
         '
         'Panel1
         '
@@ -345,7 +346,7 @@ Partial Class AdminCustomerAcc
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(1033, 622)
-        Me.Controls.Add(Me.pnlPending)
+        Me.Controls.Add(Me.pnlCustomerAcc)
         Me.Controls.Add(Me.pnlSideBar)
         Me.Name = "AdminCustomerAcc"
         Me.Text = "AdminCustomerAcc"
@@ -353,7 +354,7 @@ Partial Class AdminCustomerAcc
         Me.pnlSideBar.PerformLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlPending.ResumeLayout(False)
+        Me.pnlCustomerAcc.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -366,11 +367,11 @@ Partial Class AdminCustomerAcc
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btnPending As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnLogout As Button
     Friend WithEvents btnDashboard As Button
     Friend WithEvents pbProfile As PictureBox
     Friend WithEvents lblAdminID As Label
-    Friend WithEvents pnlPending As Panel
+    Friend WithEvents pnlCustomerAcc As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label10 As Label
