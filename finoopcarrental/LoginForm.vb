@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim userDashboard As New UserDashboard()
-        userDashboard.Show()
+        Dim UserDashboard As New UserDashboard()
+        UserDashboard.Show()
     End Sub
 End Class

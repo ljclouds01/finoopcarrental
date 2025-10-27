@@ -11,4 +11,12 @@
         Dim userDashboard As New UserDashboardPage2()
         UserDashboardPage2.Show()
     End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
