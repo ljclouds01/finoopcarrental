@@ -140,11 +140,29 @@
     <Compile Include="AdminPendings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AVANZA.Designer.vb">
+      <DependentUpon>AVANZA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AVANZA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KIA.Designer.vb">
+      <DependentUpon>KIA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MIRAGE.Designer.vb">
+      <DependentUpon>MIRAGE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MIRAGE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -180,6 +198,12 @@
     <Compile Include="UserDashboardPage2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vios.Designer.vb">
+      <DependentUpon>Vios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vios.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminCustomerAcc.resx">
@@ -191,8 +215,17 @@
     <EmbeddedResource Include="AdminPendings.resx">
       <DependentUpon>AdminPendings.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AVANZA.resx">
+      <DependentUpon>AVANZA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KIA.resx">
+      <DependentUpon>KIA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MIRAGE.resx">
+      <DependentUpon>MIRAGE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -208,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboardPage2.resx">
       <DependentUpon>UserDashboardPage2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vios.resx">
+      <DependentUpon>Vios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
