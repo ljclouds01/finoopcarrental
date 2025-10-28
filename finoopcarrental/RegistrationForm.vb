@@ -1,6 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
+Imports BCrypt.Net.BCrypt
 Public Class RegistrationForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
 
@@ -54,6 +55,11 @@ Public Class RegistrationForm
             Return False
         End If
 
+        If txtPassword.Text <> txtConfirmPassword.Text Then
+            MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+
         If cmbSex.SelectedItem Is Nothing Then
             MessageBox.Show("Please select a sex.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
@@ -74,10 +80,8 @@ Public Class RegistrationForm
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        If Not validateInputs() Then
-            Exit Sub
-        End If
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        If Not validateInputs() Then Exit Sub
 
         Dim name As String = txtFullName.Text.Trim()
         Dim contact_number As String = txtContactNo.Text
@@ -90,10 +94,13 @@ Public Class RegistrationForm
         Dim username As String = txtUsername.Text.Trim()
         Dim password As String = txtPassword.Text.Trim()
 
+        Dim hashedPassword As String = BCrypt.Net.BCrypt.HashPassword(password)
+
         Try
             Using conn As New MySqlConnection(connectionString)
                 conn.Open()
-                Dim checkQuery As String = "SELECT COUNT(*) FROM users WHERE username=@username"
+
+                Dim checkQuery As String = "SELECT COUNT(*) FROM login_info WHERE username=@username"
                 Using cmdCheck As New MySqlCommand(checkQuery, conn)
                     cmdCheck.Parameters.AddWithValue("@username", username)
                     Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
@@ -103,32 +110,47 @@ Public Class RegistrationForm
                     End If
                 End Using
 
-                Dim insertQuery As String = "INSERT INTO users (name, contact_number, address, birthday, sex, driver_license, license_expiry, email, username, password) VALUES (@name, @contact_number, @address, @birthday, @sex, @driver_license, @license_expiry, @email, @username, @password)"
-                Using cmd As New MySqlCommand(insertQuery, conn)
-                    cmd.Parameters.AddWithValue("@name", name)
-                    cmd.Parameters.AddWithValue("@contact_number", contact_number)
-                    cmd.Parameters.AddWithValue("@address", address)
-                    cmd.Parameters.AddWithValue("@birthday", birthday)
-                    cmd.Parameters.AddWithValue("@sex", sex)
-                    cmd.Parameters.AddWithValue("@driver_license", driver_license)
-                    cmd.Parameters.AddWithValue("@license_expiry", license_expiry)
-                    cmd.Parameters.AddWithValue("@email", email)
-                    cmd.Parameters.AddWithValue("@username", username)
-                    cmd.Parameters.AddWithValue("@password", password)
+                Using transaction = conn.BeginTransaction()
+                    Try
+                        Dim insertUserQuery As String = "
+                        INSERT INTO users (name, contact_number, address, birthday, sex, driver_license, license_expiry, email, username)
+                        VALUES (@name, @contact_number, @address, @birthday, @sex, @driver_license, @license_expiry, @email, @username)"
+                        Using cmd As New MySqlCommand(insertUserQuery, conn, transaction)
+                            cmd.Parameters.AddWithValue("@name", name)
+                            cmd.Parameters.AddWithValue("@contact_number", contact_number)
+                            cmd.Parameters.AddWithValue("@address", address)
+                            cmd.Parameters.AddWithValue("@birthday", birthday)
+                            cmd.Parameters.AddWithValue("@sex", sex)
+                            cmd.Parameters.AddWithValue("@driver_license", driver_license)
+                            cmd.Parameters.AddWithValue("@license_expiry", license_expiry)
+                            cmd.Parameters.AddWithValue("@email", email)
+                            cmd.Parameters.AddWithValue("@username", username)
+                            cmd.ExecuteNonQuery()
+                        End Using
 
-                    Dim rows = cmd.ExecuteNonQuery()
-                    If rows > 0 Then
+                        Dim insertLoginQuery As String = "INSERT INTO login_info (username, password) VALUES (@username, @password)"
+                        Using cmd2 As New MySqlCommand(insertLoginQuery, conn, transaction)
+                            cmd2.Parameters.AddWithValue("@username", username)
+                            cmd2.Parameters.AddWithValue("@password", hashedPassword)
+                            cmd2.ExecuteNonQuery()
+                        End Using
+
+                        transaction.Commit()
                         MessageBox.Show("User registered successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         ClearFields()
-                    Else
-                        MessageBox.Show("Failed to register user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End If
+
+                    Catch ex2 As Exception
+                        transaction.Rollback()
+                        MessageBox.Show("Transaction failed: " & ex2.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
                 End Using
             End Using
+
         Catch ex As Exception
             MessageBox.Show("Database Error: " & ex.Message)
         End Try
     End Sub
+
 
     Private Sub lnkLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkLogin.LinkClicked
         LoginForm.Show()
@@ -143,6 +165,7 @@ Public Class RegistrationForm
         txtEmail.Clear()
         txtUsername.Clear()
         txtPassword.Clear()
+        txtConfirmPassword.Clear()
         cmbSex.SelectedIndex = -1
     End Sub
 End Class

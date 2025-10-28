@@ -1,5 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
 Imports MySql.Data.MySqlClient
+Imports BCrypt.Net.BCrypt
 Public Class LoginForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Dim showPass As Boolean = False
@@ -73,41 +74,54 @@ Public Class LoginForm
             Using conn As New MySqlConnection(connectionString)
                 conn.Open()
 
-                Dim query As String = "SELECT * FROM users WHERE username=@username AND password=@password LIMIT 1"
+                Dim query As String = "
+                SELECT u.name, u.role, l.password 
+                FROM users u
+                INNER JOIN login_info l ON u.username = l.username
+                WHERE l.username = @username
+            "
+
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@username", username)
-                    cmd.Parameters.AddWithValue("@password", password)
 
                     Using reader As MySqlDataReader = cmd.ExecuteReader()
-                        If reader.HasRows Then
-                            reader.Read()
+                        If reader.Read() Then
+                            Dim storedHash As String = reader("password").ToString()
                             Dim fullName As String = reader("name").ToString()
-                            Dim role As String = reader("role").ToString()
-                            MessageBox.Show("Welcome, " & fullName & "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Dim role As String = reader("role").ToString().ToLower()
 
-                            If role = "admin" Then
-                                Dim dashboard As New AdminDashboard()
-                                dashboard.Show()
+                            If BCrypt.Net.BCrypt.Verify(password, storedHash) Then
+                                MessageBox.Show("Welcome, " & fullName & "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                                If role = "admin" Then
+                                    Dim dashboard As New AdminDashboard()
+                                    dashboard.Show()
+                                ElseIf role = "customer" Then
+                                    Dim dashboard As New UserDashboard()
+                                    dashboard.Show()
+                                Else
+                                    MessageBox.Show("Unknown user role. Please contact support.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                    Return
+                                End If
+
                                 Me.Hide()
-                            ElseIf role = "customer" Then
-                                Dim dashboard As New UserDashboard()
-                                dashboard.Show()
-                                Me.Hide()
+                                clearInputs()
                             Else
-                                MessageBox.Show("Unknown user role. Please contact support.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                Return
+                                MessageBox.Show("Invalid password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
-                            clearInputs()
                         Else
-                                MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show("Username not found.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End If
                     End Using
                 End Using
             End Using
+
         Catch ex As Exception
             MessageBox.Show("Database error: " & ex.Message)
         End Try
     End Sub
+
+
 
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
 
