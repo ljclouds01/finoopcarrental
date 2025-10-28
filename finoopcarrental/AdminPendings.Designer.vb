@@ -360,6 +360,7 @@ Partial Class AdminPendings
         '
         'ContextMenuStrip1
         '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
@@ -412,6 +413,7 @@ Partial Class AdminPendings
         Me.Controls.Add(Me.pnlPending)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AdminPendings"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pendings"
         Me.pnlPending.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

@@ -1,7 +1,28 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 Public Class LoginForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Dim showPass As Boolean = False
+
+    Private Function validateInputs() As Boolean
+        Dim usernamePattern As String = "^[A-Za-z\s]+$"
+        Dim passwordPattern As String = "^[A-Za-z0-9\s,.-]+$"
+
+        If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse Not Regex.IsMatch(txtUsername.Text, usernamePattern) Then
+            MessageBox.Show("Username is required and should only contain letters and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtUsername.Focus()
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(txtPassword.Text) OrElse Not Regex.IsMatch(txtPassword.Text, passwordPattern) Then
+            MessageBox.Show("Password is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtUsername.Focus()
+            Return False
+        End If
+
+        Return True
+
+    End Function
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles pbxLogo.Click
 
     End Sub
@@ -17,11 +38,17 @@ Public Class LoginForm
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If Not validateInputs() Then
+            Exit Sub
+        End If
         LoginUser()
     End Sub
 
     Private Sub btnLogin_KeyDown(sender As Object, e As KeyEventArgs) Handles btnLogin.KeyDown
         If e.KeyCode = Keys.Enter Then
+            If Not validateInputs() Then
+                Exit Sub
+            End If
             LoginUser()
         End If
     End Sub
@@ -71,11 +98,17 @@ Public Class LoginForm
 
     Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
         If e.KeyCode = Keys.Enter Then
+            If Not validateInputs() Then
+                Exit Sub
+            End If
             LoginUser()
         End If
     End Sub
     Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
         If e.KeyCode = Keys.Enter Then
+            If Not validateInputs() Then
+                Exit Sub
+            End If
             LoginUser()
         End If
     End Sub

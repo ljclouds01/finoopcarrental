@@ -67,7 +67,7 @@ Partial Class RegistrationForm
         Me.pnlRegister.Controls.Add(Me.txtFullName)
         Me.pnlRegister.Controls.Add(Me.lblRegister)
         Me.pnlRegister.Location = New System.Drawing.Point(120, 58)
-        Me.pnlRegister.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlRegister.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlRegister.Name = "pnlRegister"
         Me.pnlRegister.Size = New System.Drawing.Size(805, 514)
         Me.pnlRegister.TabIndex = 0
@@ -102,7 +102,7 @@ Partial Class RegistrationForm
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(57, 408)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(692, 35)
         Me.Button1.TabIndex = 16
@@ -115,7 +115,7 @@ Partial Class RegistrationForm
         Me.cb2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb2.ForeColor = System.Drawing.Color.White
         Me.cb2.Location = New System.Drawing.Point(57, 374)
-        Me.cb2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cb2.Margin = New System.Windows.Forms.Padding(2)
         Me.cb2.Name = "cb2"
         Me.cb2.Size = New System.Drawing.Size(232, 25)
         Me.cb2.TabIndex = 15
@@ -128,7 +128,7 @@ Partial Class RegistrationForm
         Me.cb1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb1.ForeColor = System.Drawing.Color.White
         Me.cb1.Location = New System.Drawing.Point(57, 343)
-        Me.cb1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cb1.Margin = New System.Windows.Forms.Padding(2)
         Me.cb1.Name = "cb1"
         Me.cb1.Size = New System.Drawing.Size(285, 25)
         Me.cb1.TabIndex = 14
@@ -139,7 +139,7 @@ Partial Class RegistrationForm
         '
         Me.txtConfirmPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPassword.Location = New System.Drawing.Point(424, 296)
-        Me.txtConfirmPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtConfirmPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.Size = New System.Drawing.Size(325, 29)
         Me.txtConfirmPassword.TabIndex = 13
@@ -148,7 +148,7 @@ Partial Class RegistrationForm
         '
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Location = New System.Drawing.Point(57, 296)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(325, 29)
         Me.txtPassword.TabIndex = 12
@@ -157,7 +157,7 @@ Partial Class RegistrationForm
         '
         Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.Location = New System.Drawing.Point(424, 251)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(2)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(325, 29)
         Me.txtUsername.TabIndex = 11
@@ -166,7 +166,7 @@ Partial Class RegistrationForm
         '
         Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.Location = New System.Drawing.Point(57, 251)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(325, 29)
         Me.txtEmail.TabIndex = 10
@@ -175,7 +175,7 @@ Partial Class RegistrationForm
         '
         Me.txtLicenseExpiryDate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLicenseExpiryDate.Location = New System.Drawing.Point(424, 205)
-        Me.txtLicenseExpiryDate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtLicenseExpiryDate.Margin = New System.Windows.Forms.Padding(2)
         Me.txtLicenseExpiryDate.Name = "txtLicenseExpiryDate"
         Me.txtLicenseExpiryDate.Size = New System.Drawing.Size(325, 29)
         Me.txtLicenseExpiryDate.TabIndex = 9
@@ -184,7 +184,7 @@ Partial Class RegistrationForm
         '
         Me.txtDriversLicenseNo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDriversLicenseNo.Location = New System.Drawing.Point(57, 205)
-        Me.txtDriversLicenseNo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDriversLicenseNo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDriversLicenseNo.Name = "txtDriversLicenseNo"
         Me.txtDriversLicenseNo.Size = New System.Drawing.Size(325, 29)
         Me.txtDriversLicenseNo.TabIndex = 8
@@ -195,7 +195,7 @@ Partial Class RegistrationForm
         Me.cmbSex.FormattingEnabled = True
         Me.cmbSex.Items.AddRange(New Object() {"Male", "Female", "Other"})
         Me.cmbSex.Location = New System.Drawing.Point(549, 107)
-        Me.cmbSex.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSex.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSex.Name = "cmbSex"
         Me.cmbSex.Size = New System.Drawing.Size(200, 29)
         Me.cmbSex.TabIndex = 7
@@ -206,7 +206,7 @@ Partial Class RegistrationForm
         Me.dtpBirthday.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpBirthday.Location = New System.Drawing.Point(57, 109)
-        Me.dtpBirthday.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpBirthday.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpBirthday.Name = "dtpBirthday"
         Me.dtpBirthday.Size = New System.Drawing.Size(200, 29)
         Me.dtpBirthday.TabIndex = 6
@@ -215,7 +215,7 @@ Partial Class RegistrationForm
         '
         Me.txtAddress.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAddress.Location = New System.Drawing.Point(57, 155)
-        Me.txtAddress.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtAddress.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(692, 29)
         Me.txtAddress.TabIndex = 5
@@ -224,7 +224,7 @@ Partial Class RegistrationForm
         '
         Me.txtContactNo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContactNo.Location = New System.Drawing.Point(305, 109)
-        Me.txtContactNo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtContactNo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.Size = New System.Drawing.Size(200, 29)
         Me.txtContactNo.TabIndex = 4
@@ -233,7 +233,7 @@ Partial Class RegistrationForm
         '
         Me.txtFullName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFullName.Location = New System.Drawing.Point(57, 63)
-        Me.txtFullName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFullName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFullName.Name = "txtFullName"
         Me.txtFullName.Size = New System.Drawing.Size(692, 29)
         Me.txtFullName.TabIndex = 3
@@ -261,8 +261,9 @@ Partial Class RegistrationForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1033, 620)
         Me.Controls.Add(Me.pnlRegister)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RegistrationForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registration"
         Me.pnlRegister.ResumeLayout(False)
         Me.pnlRegister.PerformLayout()
