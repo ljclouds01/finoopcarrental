@@ -19,7 +19,7 @@ Public Class RegistrationForm
             Return
         End If
         Dim sex As String = cmbSex.SelectedItem.ToString()
-        Dim driver_license As String = txtDriversLicenseNo.Text.Trim()
+        Dim driver_license As String = txtDriversLicenseNo.Text.Trim() 
         Dim license_expiry As String = txtLicenseExpiryDate.Text.Trim()
         Dim email As String = txtEmail.Text.Trim()
         Dim username As String = txtUsername.Text.Trim()
@@ -68,6 +68,10 @@ Public Class RegistrationForm
         Catch ex As Exception
             MessageBox.Show("Database Error: " & ex.Message)
         End Try
+    End Sub
+
+    Private Sub lnkLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkLogin.LinkClicked
+        LoginForm.Show()
     End Sub
 
     'Private Sub ClearFields()
