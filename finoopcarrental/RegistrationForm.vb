@@ -1,18 +1,10 @@
 ﻿Imports System.Text.RegularExpressions
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
 Public Class RegistrationForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
 
     Private Function validateInputs() As Boolean
-        If cb1.Checked = False OrElse cb2.Checked = False Then
-            MessageBox.Show("You must agree to the Terms and Conditions before submitting.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return False
-        End If
-
-        If cmbSex.SelectedItem Is Nothing Then
-            MessageBox.Show("Please select a sex.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
-        End If
 
         Dim namePattern As String = "^[A-Za-z\s]+$"
         Dim contactPattern As String = "^(?:(?:\+63|0)9\d{9}|(?:\(?\d{2,4}\)?[- ]?)?\d{7})$"
@@ -20,6 +12,11 @@ Public Class RegistrationForm
         Dim emailPattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         Dim usernamePattern As String = "^[A-Za-z0-9\s]+$"
         Dim passwordPattern As String = "^[A-Za-z0-9\s,.-]+$"
+
+        If txtFullName.Text = "" Or txtContactNo.Text = "" Or txtAddress.Text = "" Or txtDriversLicenseNo.Text = "" Or txtLicenseExpiryDate.Text = "" Or txtEmail.Text = "" Or txtUsername.Text = "" Or txtPassword.Text = "" Then
+            MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
 
         If String.IsNullOrWhiteSpace(txtFullName.Text) OrElse Not Regex.IsMatch(txtFullName.Text, namePattern) Then
             MessageBox.Show("Full Name is required and should only contain letters and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -57,6 +54,16 @@ Public Class RegistrationForm
             Return False
         End If
 
+        If cmbSex.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a sex.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+
+        If cb1.Checked = False OrElse cb2.Checked = False Then
+            MessageBox.Show("You must agree to the Terms and Conditions before submitting.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+
         Return True
     End Function
     Private Sub pnlRegister_Paint(sender As Object, e As PaintEventArgs) Handles pnlRegister.Paint
@@ -82,11 +89,6 @@ Public Class RegistrationForm
         Dim email As String = txtEmail.Text.Trim()
         Dim username As String = txtUsername.Text.Trim()
         Dim password As String = txtPassword.Text.Trim()
-
-        If name = "" Or contact_number = "" Or address = "" Or driver_license = "" Or license_expiry = "" Or email = "" Or username = "" Or password = "" Then
-            MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
 
         Try
             Using conn As New MySqlConnection(connectionString)
@@ -117,7 +119,7 @@ Public Class RegistrationForm
                     Dim rows = cmd.ExecuteNonQuery()
                     If rows > 0 Then
                         MessageBox.Show("User registered successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+                        ClearFields()
                     Else
                         MessageBox.Show("Failed to register user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -132,15 +134,15 @@ Public Class RegistrationForm
         LoginForm.Show()
     End Sub
 
-    'Private Sub ClearFields()
-    '    txtFullName.Clear()
-    '    txtContactNo.Clear()
-    '    txtAddress.Clear()
-    '    txtDriversLicenseNo.Clear()
-    '    txtLicenseExpiryDate.Clear()
-    '    txtEmail.Clear()
-    '    txtUsername.Clear()
-    '    txtPassword.Clear()
-    '    cmbSex.SelectedIndex = -1
-    'End Sub
+    Private Sub ClearFields()
+        txtFullName.Clear()
+        txtContactNo.Clear()
+        txtAddress.Clear()
+        txtDriversLicenseNo.Clear()
+        txtLicenseExpiryDate.Clear()
+        txtEmail.Clear()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        cmbSex.SelectedIndex = -1
+    End Sub
 End Class

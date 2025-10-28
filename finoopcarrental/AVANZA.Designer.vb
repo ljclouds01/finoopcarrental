@@ -35,6 +35,7 @@ Partial Class AVANZA
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,9 +44,10 @@ Partial Class AVANZA
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(939, 570)
+        Me.Label8.Location = New System.Drawing.Point(1252, 702)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(71, 27)
+        Me.Label8.Size = New System.Drawing.Size(91, 35)
         Me.Label8.TabIndex = 29
         Me.Label8.Text = "1,800"
         '
@@ -54,9 +56,10 @@ Partial Class AVANZA
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(1121, 525)
+        Me.Label7.Location = New System.Drawing.Point(1495, 646)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(100, 24)
+        Me.Label7.Size = New System.Drawing.Size(130, 32)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "1,496 CC"
         '
@@ -65,9 +68,10 @@ Partial Class AVANZA
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(969, 474)
+        Me.Label6.Location = New System.Drawing.Point(1292, 583)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 24)
+        Me.Label6.Size = New System.Drawing.Size(195, 32)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "CVT/ MANUAL"
         '
@@ -76,9 +80,10 @@ Partial Class AVANZA
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(928, 428)
+        Me.Label5.Location = New System.Drawing.Point(1237, 527)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(115, 24)
+        Me.Label5.Size = New System.Drawing.Size(152, 32)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "GASOLINE"
         '
@@ -87,9 +92,10 @@ Partial Class AVANZA
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(956, 382)
+        Me.Label4.Location = New System.Drawing.Point(1275, 470)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(323, 24)
+        Me.Label4.Size = New System.Drawing.Size(423, 32)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "1.5L Dual VVT-i Inline-4 (2NR-VE)"
         '
@@ -98,9 +104,10 @@ Partial Class AVANZA
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1045, 335)
+        Me.Label3.Location = New System.Drawing.Point(1393, 412)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 24)
+        Me.Label3.Size = New System.Drawing.Size(143, 32)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "5 PEOPLE"
         '
@@ -109,9 +116,10 @@ Partial Class AVANZA
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(878, 288)
+        Me.Label2.Location = New System.Drawing.Point(1171, 354)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 24)
+        Me.Label2.Size = New System.Drawing.Size(74, 32)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "2023"
         '
@@ -120,18 +128,20 @@ Partial Class AVANZA
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(895, 239)
+        Me.Label1.Location = New System.Drawing.Point(1193, 294)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 24)
+        Me.Label1.Size = New System.Drawing.Size(193, 32)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "TOYOTA VIOS"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(180, 139)
+        Me.PictureBox1.Location = New System.Drawing.Point(240, 171)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1155, 598)
+        Me.PictureBox1.Size = New System.Drawing.Size(1540, 736)
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
         '
@@ -140,9 +150,10 @@ Partial Class AVANZA
         Me.Button3.BackColor = System.Drawing.Color.White
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1179, 701)
+        Me.Button3.Location = New System.Drawing.Point(1572, 863)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(139, 26)
+        Me.Button3.Size = New System.Drawing.Size(185, 32)
         Me.Button3.TabIndex = 33
         Me.Button3.Text = "VIEW HISTORY"
         Me.Button3.UseVisualStyleBackColor = False
@@ -152,9 +163,10 @@ Partial Class AVANZA
         Me.Button4.BackColor = System.Drawing.Color.Chocolate
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(1080, 629)
+        Me.Button4.Location = New System.Drawing.Point(1440, 774)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(188, 58)
+        Me.Button4.Size = New System.Drawing.Size(251, 71)
         Me.Button4.TabIndex = 32
         Me.Button4.Text = "RESERVE"
         Me.Button4.UseVisualStyleBackColor = False
@@ -164,20 +176,36 @@ Partial Class AVANZA
         Me.Button5.BackColor = System.Drawing.Color.Lime
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(852, 629)
+        Me.Button5.Location = New System.Drawing.Point(1136, 774)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(188, 58)
+        Me.Button5.Size = New System.Drawing.Size(251, 71)
         Me.Button5.TabIndex = 31
         Me.Button5.Text = "RENT NOW"
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Transparent
+        Me.Button1.Location = New System.Drawing.Point(152, 34)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(88, 50)
+        Me.Button1.TabIndex = 34
+        Me.Button1.Text = "<"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'AVANZA
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1540, 845)
+        Me.ClientSize = New System.Drawing.Size(1924, 1040)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button5)
@@ -190,9 +218,11 @@ Partial Class AVANZA
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "AVANZA"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AVANZA"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -211,4 +241,5 @@ Partial Class AVANZA
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -42,6 +42,7 @@ Partial Class ReservedForm
         Me.lblContactNumber = New System.Windows.Forms.Label()
         Me.lblCustomersName = New System.Windows.Forms.Label()
         Me.lblReservedForm = New System.Windows.Forms.Label()
+        Me.exitBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -242,12 +243,23 @@ Partial Class ReservedForm
         Me.lblReservedForm.TabIndex = 20
         Me.lblReservedForm.Text = "Reserved Application Form"
         '
+        'exitBtn
+        '
+        Me.exitBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exitBtn.Location = New System.Drawing.Point(742, 12)
+        Me.exitBtn.Name = "exitBtn"
+        Me.exitBtn.Size = New System.Drawing.Size(31, 23)
+        Me.exitBtn.TabIndex = 40
+        Me.exitBtn.Text = "X"
+        Me.exitBtn.UseVisualStyleBackColor = True
+        '
         'ReservedForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Brown
         Me.ClientSize = New System.Drawing.Size(785, 748)
+        Me.Controls.Add(Me.exitBtn)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtStaffIncharge)
@@ -270,6 +282,7 @@ Partial Class ReservedForm
         Me.Controls.Add(Me.lblReservedForm)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ReservedForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ReservedForm"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -296,4 +309,5 @@ Partial Class ReservedForm
     Friend WithEvents lblContactNumber As Label
     Friend WithEvents lblCustomersName As Label
     Friend WithEvents lblReservedForm As Label
+    Friend WithEvents exitBtn As Button
 End Class

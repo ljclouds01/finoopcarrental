@@ -42,6 +42,12 @@ Public Class LoginForm
             Exit Sub
         End If
         LoginUser()
+        clearInputs()
+    End Sub
+
+    Private Sub clearInputs()
+        txtUsername.Clear()
+        txtPassword.Clear()
     End Sub
 
     Private Sub btnLogin_KeyDown(sender As Object, e As KeyEventArgs) Handles btnLogin.KeyDown
@@ -49,7 +55,8 @@ Public Class LoginForm
             If Not validateInputs() Then
                 Exit Sub
             End If
-            LoginUser()
+            clearInputs()
+            'LoginUser()
         End If
     End Sub
 
@@ -75,14 +82,24 @@ Public Class LoginForm
                         If reader.HasRows Then
                             reader.Read()
                             Dim fullName As String = reader("name").ToString()
+                            Dim role As String = reader("role").ToString()
                             MessageBox.Show("Welcome, " & fullName & "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                            ' Optional: open another form (dashboard)
-                            Dim dashboard As New AdminDashboard()
-                            dashboard.Show()
-                            Me.Hide()
+                            If role = "admin" Then
+                                Dim dashboard As New AdminDashboard()
+                                dashboard.Show()
+                                Me.Hide()
+                            ElseIf role = "customer" Then
+                                Dim dashboard As New UserDashboard()
+                                dashboard.Show()
+                                Me.Hide()
+                            Else
+                                MessageBox.Show("Unknown user role. Please contact support.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                Return
+                            End If
+                            clearInputs()
                         Else
-                            MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End If
                     End Using
                 End Using
@@ -102,6 +119,7 @@ Public Class LoginForm
                 Exit Sub
             End If
             LoginUser()
+            'clearInputs()
         End If
     End Sub
     Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
@@ -110,6 +128,7 @@ Public Class LoginForm
                 Exit Sub
             End If
             LoginUser()
+            'clearInputs()
         End If
     End Sub
 

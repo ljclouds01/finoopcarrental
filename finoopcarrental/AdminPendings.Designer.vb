@@ -61,10 +61,10 @@ Partial Class AdminPendings
         '
         Me.pnlPending.BackColor = System.Drawing.Color.RosyBrown
         Me.pnlPending.Controls.Add(Me.Panel1)
-        Me.pnlPending.Location = New System.Drawing.Point(303, 246)
-        Me.pnlPending.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlPending.Location = New System.Drawing.Point(404, 303)
+        Me.pnlPending.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPending.Name = "pnlPending"
-        Me.pnlPending.Size = New System.Drawing.Size(706, 341)
+        Me.pnlPending.Size = New System.Drawing.Size(941, 420)
         Me.pnlPending.TabIndex = 12
         '
         'Panel1
@@ -78,9 +78,9 @@ Partial Class AdminPendings
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(1, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(742, 33)
+        Me.Panel1.Size = New System.Drawing.Size(989, 41)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -90,10 +90,9 @@ Partial Class AdminPendings
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(2, 6)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 20)
+        Me.Label1.Size = New System.Drawing.Size(171, 25)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "CUSTOMER NAME"
         '
@@ -104,10 +103,9 @@ Partial Class AdminPendings
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(236, 6)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(315, 7)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 20)
+        Me.Label6.Size = New System.Drawing.Size(174, 25)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "START - END DATE"
         '
@@ -118,10 +116,9 @@ Partial Class AdminPendings
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label10.Location = New System.Drawing.Point(628, 6)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Location = New System.Drawing.Point(837, 7)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 20)
+        Me.Label10.Size = New System.Drawing.Size(83, 25)
         Me.Label10.TabIndex = 14
         Me.Label10.Text = "RECEIPT"
         '
@@ -132,10 +129,9 @@ Partial Class AdminPendings
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(376, 6)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(501, 7)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 20)
+        Me.Label7.Size = New System.Drawing.Size(98, 25)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "PAYMENT"
         '
@@ -146,10 +142,9 @@ Partial Class AdminPendings
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label8.Location = New System.Drawing.Point(457, 6)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(609, 7)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 20)
+        Me.Label8.Size = New System.Drawing.Size(125, 25)
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "STAFF NAME"
         '
@@ -160,10 +155,9 @@ Partial Class AdminPendings
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label9.Location = New System.Drawing.Point(564, 6)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(752, 7)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 20)
+        Me.Label9.Size = New System.Drawing.Size(76, 25)
         Me.Label9.TabIndex = 13
         Me.Label9.Text = "STATUS"
         '
@@ -174,10 +168,9 @@ Partial Class AdminPendings
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(140, 6)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(187, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 20)
+        Me.Label2.Size = New System.Drawing.Size(119, 25)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "CAR MODEL"
         '
@@ -197,9 +190,9 @@ Partial Class AdminPendings
         Me.pnlSideBar.Controls.Add(Me.lblAdminID)
         Me.pnlSideBar.ForeColor = System.Drawing.Color.White
         Me.pnlSideBar.Location = New System.Drawing.Point(-1, 0)
-        Me.pnlSideBar.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSideBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlSideBar.Name = "pnlSideBar"
-        Me.pnlSideBar.Size = New System.Drawing.Size(267, 625)
+        Me.pnlSideBar.Size = New System.Drawing.Size(356, 769)
         Me.pnlSideBar.TabIndex = 1
         '
         'pbxLogo
@@ -207,10 +200,10 @@ Partial Class AdminPendings
         Me.pbxLogo.BackColor = System.Drawing.Color.Transparent
         Me.pbxLogo.BackgroundImage = CType(resources.GetObject("pbxLogo.BackgroundImage"), System.Drawing.Image)
         Me.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pbxLogo.Location = New System.Drawing.Point(12, 16)
-        Me.pbxLogo.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbxLogo.Location = New System.Drawing.Point(16, 20)
+        Me.pbxLogo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pbxLogo.Name = "pbxLogo"
-        Me.pbxLogo.Size = New System.Drawing.Size(72, 70)
+        Me.pbxLogo.Size = New System.Drawing.Size(96, 86)
         Me.pbxLogo.TabIndex = 3
         Me.pbxLogo.TabStop = False
         '
@@ -219,9 +212,10 @@ Partial Class AdminPendings
         Me.Label11.AutoSize = True
         Me.Label11.Enabled = False
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(76, 30)
+        Me.Label11.Location = New System.Drawing.Point(101, 37)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(178, 37)
+        Me.Label11.Size = New System.Drawing.Size(222, 46)
         Me.Label11.TabIndex = 19
         Me.Label11.Text = "CAR RENTAL"
         '
@@ -232,9 +226,10 @@ Partial Class AdminPendings
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 4)
+        Me.Button2.Location = New System.Drawing.Point(0, 5)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(270, 91)
+        Me.Button2.Size = New System.Drawing.Size(360, 112)
         Me.Button2.TabIndex = 18
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = False
@@ -245,9 +240,10 @@ Partial Class AdminPendings
         Me.btnCustomerAcc.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCustomerAcc.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCustomerAcc.ForeColor = System.Drawing.Color.White
-        Me.btnCustomerAcc.Location = New System.Drawing.Point(0, 318)
+        Me.btnCustomerAcc.Location = New System.Drawing.Point(0, 391)
+        Me.btnCustomerAcc.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCustomerAcc.Name = "btnCustomerAcc"
-        Me.btnCustomerAcc.Size = New System.Drawing.Size(270, 54)
+        Me.btnCustomerAcc.Size = New System.Drawing.Size(360, 66)
         Me.btnCustomerAcc.TabIndex = 17
         Me.btnCustomerAcc.Text = "  CUSTOMER'S ACCOUNT"
         Me.btnCustomerAcc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -259,9 +255,10 @@ Partial Class AdminPendings
         Me.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPending.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPending.ForeColor = System.Drawing.Color.White
-        Me.btnPending.Location = New System.Drawing.Point(0, 263)
+        Me.btnPending.Location = New System.Drawing.Point(0, 324)
+        Me.btnPending.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPending.Name = "btnPending"
-        Me.btnPending.Size = New System.Drawing.Size(270, 61)
+        Me.btnPending.Size = New System.Drawing.Size(360, 75)
         Me.btnPending.TabIndex = 16
         Me.btnPending.Text = "  PENDING"
         Me.btnPending.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -273,9 +270,10 @@ Partial Class AdminPendings
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.Location = New System.Drawing.Point(0, 564)
+        Me.btnLogout.Location = New System.Drawing.Point(0, 694)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(270, 54)
+        Me.btnLogout.Size = New System.Drawing.Size(360, 66)
         Me.btnLogout.TabIndex = 15
         Me.btnLogout.Text = "LOG OUT"
         Me.btnLogout.UseVisualStyleBackColor = False
@@ -286,9 +284,10 @@ Partial Class AdminPendings
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDashboard.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDashboard.ForeColor = System.Drawing.Color.White
-        Me.btnDashboard.Location = New System.Drawing.Point(0, 198)
+        Me.btnDashboard.Location = New System.Drawing.Point(0, 244)
+        Me.btnDashboard.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDashboard.Name = "btnDashboard"
-        Me.btnDashboard.Size = New System.Drawing.Size(270, 67)
+        Me.btnDashboard.Size = New System.Drawing.Size(360, 82)
         Me.btnDashboard.TabIndex = 12
         Me.btnDashboard.Text = "  DASHBOARD"
         Me.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -297,10 +296,10 @@ Partial Class AdminPendings
         'pbProfile
         '
         Me.pbProfile.BackColor = System.Drawing.Color.White
-        Me.pbProfile.Location = New System.Drawing.Point(23, 110)
-        Me.pbProfile.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbProfile.Location = New System.Drawing.Point(31, 135)
+        Me.pbProfile.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pbProfile.Name = "pbProfile"
-        Me.pbProfile.Size = New System.Drawing.Size(53, 56)
+        Me.pbProfile.Size = New System.Drawing.Size(71, 69)
         Me.pbProfile.TabIndex = 5
         Me.pbProfile.TabStop = False
         '
@@ -309,10 +308,9 @@ Partial Class AdminPendings
         Me.lblAdminID.AutoSize = True
         Me.lblAdminID.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold)
         Me.lblAdminID.ForeColor = System.Drawing.Color.White
-        Me.lblAdminID.Location = New System.Drawing.Point(90, 136)
-        Me.lblAdminID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAdminID.Location = New System.Drawing.Point(120, 167)
         Me.lblAdminID.Name = "lblAdminID"
-        Me.lblAdminID.Size = New System.Drawing.Size(169, 30)
+        Me.lblAdminID.Size = New System.Drawing.Size(205, 37)
         Me.lblAdminID.TabIndex = 4
         Me.lblAdminID.Text = "ADMIN ID         "
         '
@@ -322,9 +320,10 @@ Partial Class AdminPendings
         Me.btnAvailableCars.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAvailableCars.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAvailableCars.ForeColor = System.Drawing.Color.Black
-        Me.btnAvailableCars.Location = New System.Drawing.Point(331, 50)
+        Me.btnAvailableCars.Location = New System.Drawing.Point(441, 62)
+        Me.btnAvailableCars.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAvailableCars.Name = "btnAvailableCars"
-        Me.btnAvailableCars.Size = New System.Drawing.Size(187, 167)
+        Me.btnAvailableCars.Size = New System.Drawing.Size(249, 206)
         Me.btnAvailableCars.TabIndex = 13
         Me.btnAvailableCars.Text = "Available Cars"
         Me.btnAvailableCars.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -336,9 +335,10 @@ Partial Class AdminPendings
         Me.btnRentedCars.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnRentedCars.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRentedCars.ForeColor = System.Drawing.Color.Black
-        Me.btnRentedCars.Location = New System.Drawing.Point(561, 50)
+        Me.btnRentedCars.Location = New System.Drawing.Point(748, 62)
+        Me.btnRentedCars.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRentedCars.Name = "btnRentedCars"
-        Me.btnRentedCars.Size = New System.Drawing.Size(187, 167)
+        Me.btnRentedCars.Size = New System.Drawing.Size(249, 206)
         Me.btnRentedCars.TabIndex = 14
         Me.btnRentedCars.Text = "Rented Cars"
         Me.btnRentedCars.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -350,9 +350,10 @@ Partial Class AdminPendings
         Me.btnReservedCars.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnReservedCars.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReservedCars.ForeColor = System.Drawing.Color.Black
-        Me.btnReservedCars.Location = New System.Drawing.Point(797, 50)
+        Me.btnReservedCars.Location = New System.Drawing.Point(1063, 62)
+        Me.btnReservedCars.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReservedCars.Name = "btnReservedCars"
-        Me.btnReservedCars.Size = New System.Drawing.Size(187, 167)
+        Me.btnReservedCars.Size = New System.Drawing.Size(249, 206)
         Me.btnReservedCars.TabIndex = 14
         Me.btnReservedCars.Text = "Reserved Cars"
         Me.btnReservedCars.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -369,9 +370,10 @@ Partial Class AdminPendings
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Gray
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(400, 93)
+        Me.Label3.Location = New System.Drawing.Point(533, 114)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 65)
+        Me.Label3.Size = New System.Drawing.Size(68, 81)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "0"
         '
@@ -380,9 +382,10 @@ Partial Class AdminPendings
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Gray
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(630, 93)
+        Me.Label4.Location = New System.Drawing.Point(840, 114)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 65)
+        Me.Label4.Size = New System.Drawing.Size(68, 81)
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "0"
         '
@@ -391,18 +394,19 @@ Partial Class AdminPendings
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Gray
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(861, 93)
+        Me.Label5.Location = New System.Drawing.Point(1148, 114)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 65)
+        Me.Label5.Size = New System.Drawing.Size(68, 81)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "0"
         '
         'AdminPendings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(1033, 620)
+        Me.ClientSize = New System.Drawing.Size(1377, 763)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -411,7 +415,7 @@ Partial Class AdminPendings
         Me.Controls.Add(Me.btnAvailableCars)
         Me.Controls.Add(Me.pnlSideBar)
         Me.Controls.Add(Me.pnlPending)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AdminPendings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pendings"

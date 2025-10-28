@@ -42,6 +42,7 @@ Partial Class RentalForm
         Me.txtStaffIncharge = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.exitBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblRentalForm
@@ -242,12 +243,23 @@ Partial Class RentalForm
         Me.Button1.Text = "Rent Now!"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'exitBtn
+        '
+        Me.exitBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exitBtn.Location = New System.Drawing.Point(742, 12)
+        Me.exitBtn.Name = "exitBtn"
+        Me.exitBtn.Size = New System.Drawing.Size(31, 23)
+        Me.exitBtn.TabIndex = 20
+        Me.exitBtn.Text = "X"
+        Me.exitBtn.UseVisualStyleBackColor = True
+        '
         'RentalForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Brown
         Me.ClientSize = New System.Drawing.Size(785, 748)
+        Me.Controls.Add(Me.exitBtn)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtStaffIncharge)
@@ -270,6 +282,7 @@ Partial Class RentalForm
         Me.Controls.Add(Me.lblRentalForm)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "RentalForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -295,4 +308,5 @@ Partial Class RentalForm
     Friend WithEvents txtStaffIncharge As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents exitBtn As Button
 End Class
