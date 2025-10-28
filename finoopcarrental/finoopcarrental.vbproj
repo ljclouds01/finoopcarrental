@@ -186,6 +186,18 @@
     <Compile Include="RegistrationForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RentalForm.Designer.vb">
+      <DependentUpon>RentalForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RentalForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservedForm.Designer.vb">
+      <DependentUpon>ReservedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReservedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserDashboard.Designer.vb">
       <DependentUpon>UserDashboard.vb</DependentUpon>
     </Compile>
@@ -235,6 +247,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalForm.resx">
+      <DependentUpon>RentalForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservedForm.resx">
+      <DependentUpon>ReservedForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.vb</DependentUpon>
