@@ -1,6 +1,64 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 Public Class RegistrationForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
+
+    Private Function validateInputs() As Boolean
+        If cb1.Checked = False OrElse cb2.Checked = False Then
+            MessageBox.Show("You must agree to the Terms and Conditions before submitting.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+
+        If cmbSex.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a sex.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+
+        Dim namePattern As String = "^[A-Za-z\s]+$"
+        Dim contactPattern As String = "^(?:(?:\+63|0)9\d{9}|(?:\(?\d{2,4}\)?[- ]?)?\d{7})$"
+        Dim addressPattern As String = "^[A-Za-z0-9\s,.-]+$"
+        Dim emailPattern As String = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        Dim usernamePattern As String = "^[A-Za-z0-9\s]+$"
+        Dim passwordPattern As String = "^[A-Za-z0-9\s,.-]+$"
+
+        If String.IsNullOrWhiteSpace(txtFullName.Text) OrElse Not Regex.IsMatch(txtFullName.Text, namePattern) Then
+            MessageBox.Show("Full Name is required and should only contain letters and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtFullName.Focus()
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(txtContactNo.Text) OrElse Not Regex.IsMatch(txtContactNo.Text, contactPattern) Then
+            MessageBox.Show("Contact Number is required and should only contain numbers.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtContactNo.Focus()
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(txtAddress.Text) OrElse Not Regex.IsMatch(txtAddress.Text, addressPattern) Then
+            MessageBox.Show("Address is required and should only contain letters, numbers, and common punctuation.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtAddress.Focus()
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(txtEmail.Text) OrElse Not Regex.IsMatch(txtEmail.Text, emailPattern) Then
+            MessageBox.Show("A valid Email is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtEmail.Focus()
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse Not Regex.IsMatch(txtUsername.Text, usernamePattern) Then
+            MessageBox.Show("Username is required and should only contain letters, numbers, and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtUsername.Focus()
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(txtPassword.Text) OrElse Not Regex.IsMatch(txtPassword.Text, passwordPattern) Then
+            MessageBox.Show("Password is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtPassword.Focus()
+            Return False
+        End If
+
+        Return True
+    End Function
     Private Sub pnlRegister_Paint(sender As Object, e As PaintEventArgs) Handles pnlRegister.Paint
 
     End Sub
@@ -9,17 +67,17 @@ Public Class RegistrationForm
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        If Not validateInputs() Then
+            Exit Sub
+        End If
+
         Dim name As String = txtFullName.Text.Trim()
         Dim contact_number As String = txtContactNo.Text
         Dim address As String = txtAddress.Text.Trim()
         Dim birthday As String = dtpBirthday.Value.ToString("yyyy-MM-dd")
-        If cmbSex.SelectedItem Is Nothing Then
-            MessageBox.Show("Please select a sex.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
         Dim sex As String = cmbSex.SelectedItem.ToString()
-        Dim driver_license As String = txtDriversLicenseNo.Text.Trim() 
+        Dim driver_license As String = txtDriversLicenseNo.Text.Trim()
         Dim license_expiry As String = txtLicenseExpiryDate.Text.Trim()
         Dim email As String = txtEmail.Text.Trim()
         Dim username As String = txtUsername.Text.Trim()
