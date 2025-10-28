@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class LoginForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
+    Dim showPass As Boolean = False
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles pbxLogo.Click
 
     End Sub
@@ -12,6 +13,7 @@ Public Class LoginForm
 
     Private Sub lnkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkRegister.LinkClicked
         RegistrationForm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -75,6 +77,31 @@ Public Class LoginForm
     Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
         If e.KeyCode = Keys.Enter Then
             LoginUser()
+        End If
+    End Sub
+
+    Private Sub btnShowPass_Click(sender As Object, e As EventArgs) Handles btnShowPass.Click
+        showPass = Not showPass
+
+        If showPass Then
+            txtPassword.UseSystemPasswordChar = False
+
+        Else
+            txtPassword.UseSystemPasswordChar = True
+
+        End If
+    End Sub
+
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.UseSystemPasswordChar = True
+
+    End Sub
+
+    Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+        If chkShowPassword.Checked Then
+            txtPassword.UseSystemPasswordChar = False  ' show text
+        Else
+            txtPassword.UseSystemPasswordChar = True   ' hide text
         End If
     End Sub
 End Class
