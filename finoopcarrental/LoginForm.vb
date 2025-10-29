@@ -1,9 +1,31 @@
 ﻿Imports System.Text.RegularExpressions
 Imports MySql.Data.MySqlClient
 Imports BCrypt.Net.BCrypt
+
 Public Class LoginForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Dim showPass As Boolean = False
+
+    Private Sub SetPlaceholder(txt As TextBox, placeholderText As String, Optional isPassword As Boolean = False)
+        txt.ForeColor = Color.Gray
+        txt.Text = placeholderText
+
+        AddHandler txt.GotFocus, Sub()
+                                     If txt.Text = placeholderText Then
+                                         txt.Text = ""
+                                         txt.ForeColor = Color.Black
+                                         If isPassword Then txt.UseSystemPasswordChar = True
+                                     End If
+                                 End Sub
+
+        AddHandler txt.LostFocus, Sub()
+                                      If String.IsNullOrWhiteSpace(txt.Text) Then
+                                          txt.ForeColor = Color.Gray
+                                          txt.Text = placeholderText
+                                          If isPassword Then txt.UseSystemPasswordChar = False
+                                      End If
+                                  End Sub
+    End Sub
 
     Private Function validateInputs() As Boolean
         Dim usernamePattern As String = "^[A-Za-z\s]+$"
@@ -17,49 +39,12 @@ Public Class LoginForm
 
         If String.IsNullOrWhiteSpace(txtPassword.Text) OrElse Not Regex.IsMatch(txtPassword.Text, passwordPattern) Then
             MessageBox.Show("Password is required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtUsername.Focus()
+            txtPassword.Focus()
             Return False
         End If
 
         Return True
-
     End Function
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles pbxLogo.Click
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim UserDashboard As New UserDashboard()
-        UserDashboard.Show()
-    End Sub
-
-    Private Sub lnkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkRegister.LinkClicked
-        RegistrationForm.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If Not validateInputs() Then
-            Exit Sub
-        End If
-        LoginUser()
-        clearInputs()
-    End Sub
-
-    Private Sub clearInputs()
-        txtUsername.Clear()
-        txtPassword.Clear()
-    End Sub
-
-    Private Sub btnLogin_KeyDown(sender As Object, e As KeyEventArgs) Handles btnLogin.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            If Not validateInputs() Then
-                Exit Sub
-            End If
-            clearInputs()
-            'LoginUser()
-        End If
-    End Sub
 
     Private Sub LoginUser()
         Dim username As String = txtUsername.Text.Trim()
@@ -122,52 +107,51 @@ Public Class LoginForm
     End Sub
 
 
-
-    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.UseSystemPasswordChar = False
+        SetPlaceholder(txtUsername, "Username")
+        SetPlaceholder(txtPassword, "Password", True)
     End Sub
 
-    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            If Not validateInputs() Then
-                Exit Sub
-            End If
-            LoginUser()
-            'clearInputs()
-        End If
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If Not validateInputs() Then Exit Sub
+        LoginUser()
+        clearInputs()
     End Sub
-    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            If Not validateInputs() Then
-                Exit Sub
-            End If
-            LoginUser()
-            'clearInputs()
-        End If
+
+    Private Sub clearInputs()
+        txtUsername.Clear()
+        txtPassword.Clear()
+        SetPlaceholder(txtUsername, "Username")
+        SetPlaceholder(txtPassword, "Password", True)
+    End Sub
+
+    Private Sub lnkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkRegister.LinkClicked
+        RegistrationForm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnShowPass_Click(sender As Object, e As EventArgs) Handles btnShowPass.Click
         showPass = Not showPass
-
-        If showPass Then
-            txtPassword.UseSystemPasswordChar = False
-
-        Else
-            txtPassword.UseSystemPasswordChar = True
-
-        End If
-    End Sub
-
-    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtPassword.UseSystemPasswordChar = True
-
+        txtPassword.UseSystemPasswordChar = Not showPass
     End Sub
 
     Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
-        If chkShowPassword.Checked Then
-            txtPassword.UseSystemPasswordChar = False  ' show text
-        Else
-            txtPassword.UseSystemPasswordChar = True   ' hide text
+        txtPassword.UseSystemPasswordChar = Not chkShowPassword.Checked
+    End Sub
+
+    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If Not validateInputs() Then Exit Sub
+            LoginUser()
+        End If
+    End Sub
+
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If Not validateInputs() Then Exit Sub
+            LoginUser()
         End If
     End Sub
 End Class

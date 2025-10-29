@@ -5,9 +5,7 @@ Imports BCrypt.Net.BCrypt
 Public Class RegistrationForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
 
-    '===============================
-    ' PLACEHOLDER FUNCTION
-    '===============================
+
     Private Sub SetPlaceholder(txt As TextBox, placeholderText As String, Optional isPassword As Boolean = False)
         txt.ForeColor = Color.Gray
         txt.Text = placeholderText
@@ -98,9 +96,7 @@ Public Class RegistrationForm
         Return True
     End Function
 
-    '===============================
-    ' FORM LOAD
-    '===============================
+
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set placeholders for all textboxes
         SetPlaceholder(txtFullName, "Full Name (First Middle Last)")
@@ -114,9 +110,7 @@ Public Class RegistrationForm
         SetPlaceholder(txtLicenseExpiryDate, "License Expiry Date (MM/DD/YYYY)")
     End Sub
 
-    '===============================
-    ' REGISTER BUTTON
-    '===============================
+
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         If Not validateInputs() Then Exit Sub
 
@@ -188,9 +182,7 @@ Public Class RegistrationForm
         End Try
     End Sub
 
-    '===============================
-    ' CLEAR FUNCTION
-    '===============================
+
     Private Sub ClearFields()
         txtFullName.Clear()
         txtContactNo.Clear()
@@ -204,9 +196,6 @@ Public Class RegistrationForm
         cmbSex.SelectedIndex = -1
     End Sub
 
-    '===============================
-    ' LOGIN LINK
-    '===============================
     Private Sub lnkLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkLogin.LinkClicked
         LoginForm.Show()
     End Sub
