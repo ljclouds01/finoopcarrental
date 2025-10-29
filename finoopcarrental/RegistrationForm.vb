@@ -1,9 +1,34 @@
 ﻿Imports System.Text.RegularExpressions
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
 Imports BCrypt.Net.BCrypt
+
 Public Class RegistrationForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
+
+    '===============================
+    ' PLACEHOLDER FUNCTION
+    '===============================
+    Private Sub SetPlaceholder(txt As TextBox, placeholderText As String, Optional isPassword As Boolean = False)
+        txt.ForeColor = Color.Gray
+        txt.Text = placeholderText
+
+        AddHandler txt.GotFocus, Sub()
+                                     If txt.Text = placeholderText Then
+                                         txt.Text = ""
+                                         txt.ForeColor = Color.Black
+                                         If isPassword Then txt.UseSystemPasswordChar = True
+                                     End If
+                                 End Sub
+
+        AddHandler txt.LostFocus, Sub()
+                                      If String.IsNullOrWhiteSpace(txt.Text) Then
+                                          txt.ForeColor = Color.Gray
+                                          txt.Text = placeholderText
+                                          If isPassword Then txt.UseSystemPasswordChar = False
+                                      End If
+                                  End Sub
+    End Sub
+
 
     Private Function validateInputs() As Boolean
 
@@ -72,14 +97,26 @@ Public Class RegistrationForm
 
         Return True
     End Function
-    Private Sub pnlRegister_Paint(sender As Object, e As PaintEventArgs) Handles pnlRegister.Paint
 
-    End Sub
-
+    '===============================
+    ' FORM LOAD
+    '===============================
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ' Set placeholders for all textboxes
+        SetPlaceholder(txtFullName, "Full Name (First Middle Last)")
+        SetPlaceholder(txtUsername, "Username")
+        SetPlaceholder(txtPassword, "Password", True)
+        SetPlaceholder(txtConfirmPassword, "Confirm Password", True)
+        SetPlaceholder(txtEmail, "Email Address")
+        SetPlaceholder(txtContactNo, "Contact Number")
+        SetPlaceholder(txtAddress, "Complete Address")
+        SetPlaceholder(txtDriversLicenseNo, "Driver's License Number")
+        SetPlaceholder(txtLicenseExpiryDate, "License Expiry Date (MM/DD/YYYY)")
     End Sub
 
+    '===============================
+    ' REGISTER BUTTON
+    '===============================
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         If Not validateInputs() Then Exit Sub
 
@@ -151,11 +188,9 @@ Public Class RegistrationForm
         End Try
     End Sub
 
-
-    Private Sub lnkLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkLogin.LinkClicked
-        LoginForm.Show()
-    End Sub
-
+    '===============================
+    ' CLEAR FUNCTION
+    '===============================
     Private Sub ClearFields()
         txtFullName.Clear()
         txtContactNo.Clear()
@@ -168,4 +203,12 @@ Public Class RegistrationForm
         txtConfirmPassword.Clear()
         cmbSex.SelectedIndex = -1
     End Sub
+
+    '===============================
+    ' LOGIN LINK
+    '===============================
+    Private Sub lnkLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkLogin.LinkClicked
+        LoginForm.Show()
+    End Sub
+
 End Class

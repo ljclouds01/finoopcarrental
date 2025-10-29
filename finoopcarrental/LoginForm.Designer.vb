@@ -93,7 +93,7 @@ Partial Class LoginForm
         Me.chkShowPassword.AutoSize = True
         Me.chkShowPassword.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.chkShowPassword.Location = New System.Drawing.Point(513, 210)
-        Me.chkShowPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkShowPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.chkShowPassword.Name = "chkShowPassword"
         Me.chkShowPassword.Size = New System.Drawing.Size(125, 20)
         Me.chkShowPassword.TabIndex = 11
@@ -120,7 +120,7 @@ Partial Class LoginForm
         Me.lnkRegister.AutoSize = True
         Me.lnkRegister.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnkRegister.LinkColor = System.Drawing.Color.Red
-        Me.lnkRegister.Location = New System.Drawing.Point(271, 375)
+        Me.lnkRegister.Location = New System.Drawing.Point(303, 375)
         Me.lnkRegister.Name = "lnkRegister"
         Me.lnkRegister.Size = New System.Drawing.Size(72, 23)
         Me.lnkRegister.TabIndex = 9

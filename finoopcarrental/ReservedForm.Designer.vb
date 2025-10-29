@@ -48,7 +48,7 @@ Partial Class ReservedForm
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(430, 661)
+        Me.Button1.Location = New System.Drawing.Point(423, 650)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(286, 41)
         Me.Button1.TabIndex = 39
@@ -60,7 +60,7 @@ Partial Class ReservedForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(69, 550)
+        Me.Label3.Location = New System.Drawing.Point(62, 539)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(128, 23)
         Me.Label3.TabIndex = 38
@@ -69,7 +69,7 @@ Partial Class ReservedForm
         'txtStaffIncharge
         '
         Me.txtStaffIncharge.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtStaffIncharge.Location = New System.Drawing.Point(73, 577)
+        Me.txtStaffIncharge.Location = New System.Drawing.Point(66, 566)
         Me.txtStaffIncharge.Name = "txtStaffIncharge"
         Me.txtStaffIncharge.Size = New System.Drawing.Size(639, 34)
         Me.txtStaffIncharge.TabIndex = 37
@@ -77,7 +77,7 @@ Partial Class ReservedForm
         'txtPrice
         '
         Me.txtPrice.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.Location = New System.Drawing.Point(77, 509)
+        Me.txtPrice.Location = New System.Drawing.Point(70, 498)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(285, 34)
         Me.txtPrice.TabIndex = 36
@@ -86,7 +86,7 @@ Partial Class ReservedForm
         '
         Me.cmbModeofPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbModeofPayment.FormattingEnabled = True
-        Me.cmbModeofPayment.Location = New System.Drawing.Point(430, 507)
+        Me.cmbModeofPayment.Location = New System.Drawing.Point(423, 496)
         Me.cmbModeofPayment.Name = "cmbModeofPayment"
         Me.cmbModeofPayment.Size = New System.Drawing.Size(285, 36)
         Me.cmbModeofPayment.TabIndex = 35
@@ -96,7 +96,7 @@ Partial Class ReservedForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(423, 481)
+        Me.Label2.Location = New System.Drawing.Point(416, 470)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(149, 23)
         Me.Label2.TabIndex = 34
@@ -107,7 +107,7 @@ Partial Class ReservedForm
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(69, 481)
+        Me.Label1.Location = New System.Drawing.Point(62, 470)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(47, 23)
         Me.Label1.TabIndex = 33
@@ -118,7 +118,7 @@ Partial Class ReservedForm
         Me.dtpEndDate.CalendarFont = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpEndDate.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpEndDate.Location = New System.Drawing.Point(430, 440)
+        Me.dtpEndDate.Location = New System.Drawing.Point(423, 429)
         Me.dtpEndDate.Name = "dtpEndDate"
         Me.dtpEndDate.Size = New System.Drawing.Size(285, 34)
         Me.dtpEndDate.TabIndex = 32
@@ -128,7 +128,7 @@ Partial Class ReservedForm
         Me.lblEndDate.AutoSize = True
         Me.lblEndDate.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lblEndDate.ForeColor = System.Drawing.Color.White
-        Me.lblEndDate.Location = New System.Drawing.Point(423, 414)
+        Me.lblEndDate.Location = New System.Drawing.Point(416, 403)
         Me.lblEndDate.Name = "lblEndDate"
         Me.lblEndDate.Size = New System.Drawing.Size(80, 23)
         Me.lblEndDate.TabIndex = 31
@@ -139,7 +139,7 @@ Partial Class ReservedForm
         Me.lblStartDate.AutoSize = True
         Me.lblStartDate.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lblStartDate.ForeColor = System.Drawing.Color.White
-        Me.lblStartDate.Location = New System.Drawing.Point(69, 414)
+        Me.lblStartDate.Location = New System.Drawing.Point(62, 403)
         Me.lblStartDate.Name = "lblStartDate"
         Me.lblStartDate.Size = New System.Drawing.Size(87, 23)
         Me.lblStartDate.TabIndex = 30
@@ -150,7 +150,7 @@ Partial Class ReservedForm
         Me.dtpStartDate.CalendarFont = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpStartDate.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpStartDate.Location = New System.Drawing.Point(77, 440)
+        Me.dtpStartDate.Location = New System.Drawing.Point(70, 429)
         Me.dtpStartDate.Name = "dtpStartDate"
         Me.dtpStartDate.Size = New System.Drawing.Size(285, 34)
         Me.dtpStartDate.TabIndex = 29
@@ -159,7 +159,7 @@ Partial Class ReservedForm
         '
         Me.cmbCarModel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbCarModel.FormattingEnabled = True
-        Me.cmbCarModel.Location = New System.Drawing.Point(80, 370)
+        Me.cmbCarModel.Location = New System.Drawing.Point(73, 359)
         Me.cmbCarModel.Name = "cmbCarModel"
         Me.cmbCarModel.Size = New System.Drawing.Size(635, 36)
         Me.cmbCarModel.TabIndex = 28
@@ -169,7 +169,7 @@ Partial Class ReservedForm
         Me.lblCarModel.AutoSize = True
         Me.lblCarModel.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lblCarModel.ForeColor = System.Drawing.Color.White
-        Me.lblCarModel.Location = New System.Drawing.Point(73, 345)
+        Me.lblCarModel.Location = New System.Drawing.Point(66, 334)
         Me.lblCarModel.Name = "lblCarModel"
         Me.lblCarModel.Size = New System.Drawing.Size(90, 23)
         Me.lblCarModel.TabIndex = 27
@@ -178,7 +178,7 @@ Partial Class ReservedForm
         'txtAddress
         '
         Me.txtAddress.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(77, 305)
+        Me.txtAddress.Location = New System.Drawing.Point(70, 294)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(639, 34)
         Me.txtAddress.TabIndex = 26
@@ -186,7 +186,7 @@ Partial Class ReservedForm
         'txtContactNumber
         '
         Me.txtContactNumber.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContactNumber.Location = New System.Drawing.Point(77, 238)
+        Me.txtContactNumber.Location = New System.Drawing.Point(70, 227)
         Me.txtContactNumber.Name = "txtContactNumber"
         Me.txtContactNumber.Size = New System.Drawing.Size(639, 34)
         Me.txtContactNumber.TabIndex = 25
@@ -194,7 +194,7 @@ Partial Class ReservedForm
         'txtCustomersName
         '
         Me.txtCustomersName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCustomersName.Location = New System.Drawing.Point(77, 171)
+        Me.txtCustomersName.Location = New System.Drawing.Point(70, 160)
         Me.txtCustomersName.Name = "txtCustomersName"
         Me.txtCustomersName.Size = New System.Drawing.Size(639, 34)
         Me.txtCustomersName.TabIndex = 24
@@ -204,7 +204,7 @@ Partial Class ReservedForm
         Me.lblAddress.AutoSize = True
         Me.lblAddress.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lblAddress.ForeColor = System.Drawing.Color.White
-        Me.lblAddress.Location = New System.Drawing.Point(73, 279)
+        Me.lblAddress.Location = New System.Drawing.Point(66, 268)
         Me.lblAddress.Name = "lblAddress"
         Me.lblAddress.Size = New System.Drawing.Size(70, 23)
         Me.lblAddress.TabIndex = 23
@@ -215,7 +215,7 @@ Partial Class ReservedForm
         Me.lblContactNumber.AutoSize = True
         Me.lblContactNumber.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lblContactNumber.ForeColor = System.Drawing.Color.White
-        Me.lblContactNumber.Location = New System.Drawing.Point(69, 212)
+        Me.lblContactNumber.Location = New System.Drawing.Point(62, 201)
         Me.lblContactNumber.Name = "lblContactNumber"
         Me.lblContactNumber.Size = New System.Drawing.Size(138, 23)
         Me.lblContactNumber.TabIndex = 22
@@ -226,7 +226,7 @@ Partial Class ReservedForm
         Me.lblCustomersName.AutoSize = True
         Me.lblCustomersName.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lblCustomersName.ForeColor = System.Drawing.Color.White
-        Me.lblCustomersName.Location = New System.Drawing.Point(69, 145)
+        Me.lblCustomersName.Location = New System.Drawing.Point(62, 134)
         Me.lblCustomersName.Name = "lblCustomersName"
         Me.lblCustomersName.Size = New System.Drawing.Size(145, 23)
         Me.lblCustomersName.TabIndex = 21
@@ -237,7 +237,7 @@ Partial Class ReservedForm
         Me.lblReservedForm.AutoSize = True
         Me.lblReservedForm.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblReservedForm.ForeColor = System.Drawing.Color.White
-        Me.lblReservedForm.Location = New System.Drawing.Point(223, 46)
+        Me.lblReservedForm.Location = New System.Drawing.Point(216, 35)
         Me.lblReservedForm.Name = "lblReservedForm"
         Me.lblReservedForm.Size = New System.Drawing.Size(371, 38)
         Me.lblReservedForm.TabIndex = 20
