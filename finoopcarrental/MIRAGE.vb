@@ -12,6 +12,9 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        SessionModule.selectedCarModel = "Mitsubishi Mirage"
+        SessionModule.selectedCarRate = 1500
+
         Dim rentalForm As New RentalForm()
         rentalForm.Show()
     End Sub

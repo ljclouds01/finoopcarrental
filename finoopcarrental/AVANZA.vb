@@ -3,6 +3,9 @@
     Public Property LoggedInContact As String
     Public Property LoggedInAddress As String
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        SessionModule.selectedCarModel = "Toyota Avanza"
+        SessionModule.selectedCarRate = 1500
+
         Dim rentalForm As New RentalForm()
         rentalForm.Show()
     End Sub

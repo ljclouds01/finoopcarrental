@@ -4,6 +4,9 @@
         txtContactNumber.Text = SessionModule.LoggedInContact
         txtAddress.Text = SessionModule.LoggedInAddress
 
+        txtCarModel.Text = SessionModule.selectedCarModel
+        txtPrice.Text = SessionModule.selectedCarRate.ToString("N2")
+
         txtCustomersName.ReadOnly = True
         txtContactNumber.ReadOnly = True
         txtAddress.ReadOnly = True

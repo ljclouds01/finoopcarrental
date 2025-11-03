@@ -30,7 +30,6 @@ Partial Class RentalForm
         Me.txtContactNumber = New System.Windows.Forms.TextBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.lblCarModel = New System.Windows.Forms.Label()
-        Me.cmbCarModel = New System.Windows.Forms.ComboBox()
         Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
         Me.lblStartDate = New System.Windows.Forms.Label()
         Me.lblEndDate = New System.Windows.Forms.Label()
@@ -43,6 +42,7 @@ Partial Class RentalForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.exitBtn = New System.Windows.Forms.Button()
+        Me.txtCarModel = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblRentalForm
@@ -123,15 +123,6 @@ Partial Class RentalForm
         Me.lblCarModel.Size = New System.Drawing.Size(90, 23)
         Me.lblCarModel.TabIndex = 7
         Me.lblCarModel.Text = "Car Model"
-        '
-        'cmbCarModel
-        '
-        Me.cmbCarModel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCarModel.FormattingEnabled = True
-        Me.cmbCarModel.Location = New System.Drawing.Point(74, 360)
-        Me.cmbCarModel.Name = "cmbCarModel"
-        Me.cmbCarModel.Size = New System.Drawing.Size(635, 36)
-        Me.cmbCarModel.TabIndex = 8
         '
         'dtpStartDate
         '
@@ -253,12 +244,21 @@ Partial Class RentalForm
         Me.exitBtn.Text = "X"
         Me.exitBtn.UseVisualStyleBackColor = True
         '
+        'txtCarModel
+        '
+        Me.txtCarModel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCarModel.Location = New System.Drawing.Point(73, 357)
+        Me.txtCarModel.Name = "txtCarModel"
+        Me.txtCarModel.Size = New System.Drawing.Size(639, 34)
+        Me.txtCarModel.TabIndex = 21
+        '
         'RentalForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Brown
         Me.ClientSize = New System.Drawing.Size(785, 748)
+        Me.Controls.Add(Me.txtCarModel)
         Me.Controls.Add(Me.exitBtn)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
@@ -271,7 +271,6 @@ Partial Class RentalForm
         Me.Controls.Add(Me.lblEndDate)
         Me.Controls.Add(Me.lblStartDate)
         Me.Controls.Add(Me.dtpStartDate)
-        Me.Controls.Add(Me.cmbCarModel)
         Me.Controls.Add(Me.lblCarModel)
         Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtContactNumber)
@@ -296,7 +295,6 @@ Partial Class RentalForm
     Friend WithEvents txtContactNumber As TextBox
     Friend WithEvents txtAddress As TextBox
     Friend WithEvents lblCarModel As Label
-    Friend WithEvents cmbCarModel As ComboBox
     Friend WithEvents dtpStartDate As DateTimePicker
     Friend WithEvents lblStartDate As Label
     Friend WithEvents lblEndDate As Label
@@ -309,4 +307,5 @@ Partial Class RentalForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents exitBtn As Button
+    Friend WithEvents txtCarModel As TextBox
 End Class
