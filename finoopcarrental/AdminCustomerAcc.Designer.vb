@@ -173,7 +173,7 @@ Partial Class AdminCustomerAcc
         'pbProfile
         '
         Me.pbProfile.BackColor = System.Drawing.Color.White
-        Me.pbProfile.Location = New System.Drawing.Point(31, 135)
+        Me.pbProfile.Location = New System.Drawing.Point(31, 150)
         Me.pbProfile.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pbProfile.Name = "pbProfile"
         Me.pbProfile.Size = New System.Drawing.Size(71, 69)
@@ -185,7 +185,7 @@ Partial Class AdminCustomerAcc
         Me.lblAdminID.AutoSize = True
         Me.lblAdminID.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold)
         Me.lblAdminID.ForeColor = System.Drawing.Color.White
-        Me.lblAdminID.Location = New System.Drawing.Point(120, 167)
+        Me.lblAdminID.Location = New System.Drawing.Point(107, 182)
         Me.lblAdminID.Name = "lblAdminID"
         Me.lblAdminID.Size = New System.Drawing.Size(205, 37)
         Me.lblAdminID.TabIndex = 4

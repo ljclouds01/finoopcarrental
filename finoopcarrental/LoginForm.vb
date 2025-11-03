@@ -108,9 +108,7 @@ Public Class LoginForm
 
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtPassword.UseSystemPasswordChar = False
-        SetPlaceholder(txtUsername, "Username")
-        SetPlaceholder(txtPassword, "Password", True)
+        txtPassword.UseSystemPasswordChar = True
     End Sub
 
 
@@ -123,22 +121,11 @@ Public Class LoginForm
     Private Sub clearInputs()
         txtUsername.Clear()
         txtPassword.Clear()
-        SetPlaceholder(txtUsername, "Username")
-        SetPlaceholder(txtPassword, "Password", True)
     End Sub
 
     Private Sub lnkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkRegister.LinkClicked
         RegistrationForm.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub btnShowPass_Click(sender As Object, e As EventArgs) Handles btnShowPass.Click
-        showPass = Not showPass
-        txtPassword.UseSystemPasswordChar = Not showPass
-    End Sub
-
-    Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
-        txtPassword.UseSystemPasswordChar = Not chkShowPassword.Checked
     End Sub
 
     Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
@@ -152,6 +139,22 @@ Public Class LoginForm
         If e.KeyCode = Keys.Enter Then
             If Not validateInputs() Then Exit Sub
             LoginUser()
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
+    End Sub
+
+    Private Sub picShowHide_Click(sender As Object, e As EventArgs) Handles picShowHide.Click
+        If showPass Then
+            txtPassword.UseSystemPasswordChar = True
+            picShowHide.Image = My.Resources.eye_open
+            showPass = False
+        Else
+            txtPassword.UseSystemPasswordChar = False
+            picShowHide.Image = My.Resources.eye_closed
+            showPass = True
         End If
     End Sub
 End Class

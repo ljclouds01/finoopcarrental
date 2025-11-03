@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LoginForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,12 @@ Partial Class LoginForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.lblCarRental = New System.Windows.Forms.Label()
         Me.pbxLogo = New System.Windows.Forms.PictureBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
-        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
-        Me.btnShowPass = New System.Windows.Forms.Button()
         Me.lnkRegister = New System.Windows.Forms.LinkLabel()
         Me.lblDont = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -37,9 +35,10 @@ Partial Class LoginForm
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblLogin = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.picShowHide = New System.Windows.Forms.PictureBox()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLogin.SuspendLayout()
+        CType(Me.picShowHide, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblCarRental
@@ -71,8 +70,7 @@ Partial Class LoginForm
         Me.pnlLogin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlLogin.BackColor = System.Drawing.Color.Transparent
         Me.pnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pnlLogin.Controls.Add(Me.chkShowPassword)
-        Me.pnlLogin.Controls.Add(Me.btnShowPass)
+        Me.pnlLogin.Controls.Add(Me.picShowHide)
         Me.pnlLogin.Controls.Add(Me.lnkRegister)
         Me.pnlLogin.Controls.Add(Me.lblDont)
         Me.pnlLogin.Controls.Add(Me.btnLogin)
@@ -88,39 +86,13 @@ Partial Class LoginForm
         Me.pnlLogin.Size = New System.Drawing.Size(719, 536)
         Me.pnlLogin.TabIndex = 2
         '
-        'chkShowPassword
-        '
-        Me.chkShowPassword.AutoSize = True
-        Me.chkShowPassword.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.chkShowPassword.Location = New System.Drawing.Point(513, 210)
-        Me.chkShowPassword.Margin = New System.Windows.Forms.Padding(4)
-        Me.chkShowPassword.Name = "chkShowPassword"
-        Me.chkShowPassword.Size = New System.Drawing.Size(125, 20)
-        Me.chkShowPassword.TabIndex = 11
-        Me.chkShowPassword.Text = "Show Password"
-        Me.chkShowPassword.UseVisualStyleBackColor = True
-        '
-        'btnShowPass
-        '
-        Me.btnShowPass.BackColor = System.Drawing.Color.White
-        Me.btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnShowPass.Font = New System.Drawing.Font("Segoe UI Emoji", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShowPass.ForeColor = System.Drawing.Color.Black
-        Me.btnShowPass.Location = New System.Drawing.Point(595, 240)
-        Me.btnShowPass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnShowPass.Name = "btnShowPass"
-        Me.btnShowPass.Size = New System.Drawing.Size(51, 34)
-        Me.btnShowPass.TabIndex = 10
-        Me.btnShowPass.Text = "👁️"
-        Me.btnShowPass.UseVisualStyleBackColor = False
-        '
         'lnkRegister
         '
         Me.lnkRegister.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lnkRegister.AutoSize = True
         Me.lnkRegister.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnkRegister.LinkColor = System.Drawing.Color.Red
-        Me.lnkRegister.Location = New System.Drawing.Point(303, 375)
+        Me.lnkRegister.Location = New System.Drawing.Point(288, 375)
         Me.lnkRegister.Name = "lnkRegister"
         Me.lnkRegister.Size = New System.Drawing.Size(72, 23)
         Me.lnkRegister.TabIndex = 9
@@ -221,15 +193,16 @@ Partial Class LoginForm
         Me.lblLogin.Text = "User Login"
         Me.lblLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Button1
+        'picShowHide
         '
-        Me.Button1.Location = New System.Drawing.Point(75, 228)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 53)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "page viewer dont delete"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.picShowHide.BackColor = System.Drawing.Color.White
+        Me.picShowHide.Image = Global.finoopcarrental.My.Resources.Resources.eye_open
+        Me.picShowHide.Location = New System.Drawing.Point(597, 239)
+        Me.picShowHide.Name = "picShowHide"
+        Me.picShowHide.Size = New System.Drawing.Size(51, 35)
+        Me.picShowHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picShowHide.TabIndex = 10
+        Me.picShowHide.TabStop = False
         '
         'LoginForm
         '
@@ -238,7 +211,6 @@ Partial Class LoginForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1377, 763)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.pbxLogo)
         Me.Controls.Add(Me.lblCarRental)
@@ -249,6 +221,7 @@ Partial Class LoginForm
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlLogin.PerformLayout()
+        CType(Me.picShowHide, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -266,7 +239,5 @@ Partial Class LoginForm
     Friend WithEvents lblDont As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnForgotPassword As Button
-    Friend WithEvents btnShowPass As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents chkShowPassword As CheckBox
+    Friend WithEvents picShowHide As PictureBox
 End Class

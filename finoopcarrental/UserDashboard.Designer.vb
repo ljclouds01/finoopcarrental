@@ -24,15 +24,15 @@ Partial Class UserDashboard
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserDashboard))
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,19 +50,6 @@ Partial Class UserDashboard
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(584, 457)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(208, 47)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "VIEW"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.Transparent
@@ -70,25 +57,12 @@ Partial Class UserDashboard
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Location = New System.Drawing.Point(1633, 911)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(143, 50)
         Me.Button5.TabIndex = 8
         Me.Button5.Text = "NEXT"
         Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1241, 457)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(208, 47)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "VIEW"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -101,21 +75,9 @@ Partial Class UserDashboard
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(584, 789)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(208, 47)
-        Me.Button6.TabIndex = 12
-        Me.Button6.Text = "VIEW"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
         Me.PictureBox2.ErrorImage = Nothing
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(417, 558)
@@ -124,19 +86,6 @@ Partial Class UserDashboard
         Me.PictureBox2.Size = New System.Drawing.Size(551, 297)
         Me.PictureBox2.TabIndex = 11
         Me.PictureBox2.TabStop = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1241, 789)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(208, 47)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "VIEW"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'PictureBox4
         '
@@ -156,12 +105,64 @@ Partial Class UserDashboard
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Transparent
         Me.Button4.Location = New System.Drawing.Point(977, 911)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(88, 50)
         Me.Button4.TabIndex = 15
         Me.Button4.Text = "1"
         Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.White
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(1241, 789)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(208, 47)
+        Me.Button3.TabIndex = 14
+        Me.Button3.Text = "VIEW"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(1241, 457)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(208, 47)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "VIEW"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.White
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(584, 789)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(208, 47)
+        Me.Button6.TabIndex = 12
+        Me.Button6.Text = "VIEW"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(584, 457)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(208, 47)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "VIEW"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'UserDashboard
         '
@@ -195,13 +196,13 @@ Partial Class UserDashboard
 
     End Sub
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button1 As Button
 End Class

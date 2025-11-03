@@ -98,7 +98,6 @@ Public Class RegistrationForm
 
 
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set placeholders for all textboxes
         SetPlaceholder(txtFullName, "Full Name (First Middle Last)")
         SetPlaceholder(txtUsername, "Username")
         SetPlaceholder(txtPassword, "Password", True)
