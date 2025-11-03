@@ -207,6 +207,7 @@
     <Compile Include="ReservedForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SessionModule.vb" />
     <Compile Include="UserDashboard.Designer.vb">
       <DependentUpon>UserDashboard.vb</DependentUpon>
     </Compile>

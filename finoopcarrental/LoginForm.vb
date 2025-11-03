@@ -60,7 +60,7 @@ Public Class LoginForm
                 conn.Open()
 
                 Dim query As String = "
-                SELECT u.name, u.role, l.password 
+                SELECT u.name, u.contact_number, u.address, u.role, l.password 
                 FROM users u
                 INNER JOIN login_info l ON u.username = l.username
                 WHERE l.username = @username
@@ -82,8 +82,14 @@ Public Class LoginForm
                                     Dim dashboard As New AdminDashboard()
                                     dashboard.Show()
                                 ElseIf role = "customer" Then
+                                    SessionModule.LoggedInName = fullName
+                                    SessionModule.LoggedInContact = reader("contact_number").ToString()
+                                    SessionModule.LoggedInAddress = reader("address").ToString()
+                                    SessionModule.LoggedInRole = role
+
                                     Dim dashboard As New UserDashboard()
                                     dashboard.Show()
+                                    Me.Hide()
                                 Else
                                     MessageBox.Show("Unknown user role. Please contact support.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                     Return
