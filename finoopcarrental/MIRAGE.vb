@@ -11,7 +11,7 @@
         Me.Close()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnRent.Click
         SessionModule.selectedCarModel = "Mitsubishi Mirage"
         SessionModule.selectedCarRate = 1500
 
@@ -24,6 +24,7 @@
     End Sub
 
     Private Sub MIRAGE_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
+        CheckCarAvailability(connectionString, "Mitsubishi Mirage", btnRent)
     End Sub
 End Class

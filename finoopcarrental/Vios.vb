@@ -22,7 +22,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRent.Click
         SessionModule.selectedCarModel = "Toyota Vios"
         SessionModule.selectedCarRate = 1500
 
@@ -48,6 +48,7 @@
     End Sub
 
     Private Sub Vios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
+        CheckCarAvailability(connectionString, "Toyota Vios", btnRent)
     End Sub
 End Class

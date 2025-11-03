@@ -7,10 +7,11 @@
     End Sub
 
     Private Sub KIA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
+        CheckCarAvailability(connectionString, "Kia Soluto", btnRent)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRent.Click
         SessionModule.selectedCarModel = "Kia Soluto"
         SessionModule.selectedCarRate = 1500
 

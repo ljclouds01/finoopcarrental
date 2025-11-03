@@ -34,7 +34,7 @@ Partial Class MIRAGE
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnRent = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -171,18 +171,18 @@ Partial Class MIRAGE
         Me.Button4.Text = "RESERVE"
         Me.Button4.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btnRent
         '
-        Me.Button5.BackColor = System.Drawing.Color.Lime
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(1135, 768)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(251, 71)
-        Me.Button5.TabIndex = 31
-        Me.Button5.Text = "RENT NOW"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnRent.BackColor = System.Drawing.Color.Lime
+        Me.btnRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRent.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRent.Location = New System.Drawing.Point(1135, 768)
+        Me.btnRent.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRent.Name = "btnRent"
+        Me.btnRent.Size = New System.Drawing.Size(251, 71)
+        Me.btnRent.TabIndex = 31
+        Me.btnRent.Text = "RENT NOW"
+        Me.btnRent.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -208,7 +208,7 @@ Partial Class MIRAGE
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.btnRent)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -240,6 +240,6 @@ Partial Class MIRAGE
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnRent As Button
     Friend WithEvents Button1 As Button
 End Class
