@@ -1,86 +1,59 @@
-﻿Public Class AdminDashboard
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles pnlSideBar.Paint
+﻿Imports MySql.Data.MySqlClient
+Public Class AdminDashboard
+    Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
 
+    Private Sub FormatGridView(dgv As DataGridView)
+        With dgv
+            .RowHeadersVisible = False
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .AllowUserToAddRows = False
+            .ReadOnly = True
+            .MultiSelect = False
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.Maroon
+            .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            .EnableHeadersVisualStyles = False
+        End With
     End Sub
 
-    Private Sub lblAdminID_Click(sender As Object, e As EventArgs) Handles lblAdminID.Click
+    Private Sub LoadAvailableCars()
+        Try
+            Using conn As New MySqlConnection(connectionString)
+                conn.Open()
+                Dim query As String = "SELECT car_model AS 'Car Model', plateNumber AS 'Plate No.', color AS 'Color' FROM cars WHERE stock > 0"
+                Using adapter As New MySqlDataAdapter(query, conn)
 
+                    Dim table As New DataTable()
+                    adapter.Fill(table)
+                    dgvAvailable.DataSource = table
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading available cars: " & ex.Message)
+        End Try
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+    Private Sub LoadRentedCars()
+        Try
+            Using conn As New MySqlConnection(connectionString)
+                conn.Open()
+                Dim query As String = "SELECT c.car_model AS 'Car Model', c.plateNumber AS 'Plate No.', c.color AS 'Color' FROM rental r JOIN cars c ON r.car_id = c.id WHERE r.status = 'Rented'"
+                Using adapter As New MySqlDataAdapter(query, conn)
+                    Dim table As New DataTable()
+                    adapter.Fill(table)
+                    dgvRented.DataSource = table
+                End Using
+            End Using
+        Catch ex As Exception
 
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblHere.Click
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnAvailableCars.Click
-
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs)
-
+        End Try
     End Sub
 
     Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Label11_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub Label10_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-    End Sub
-
-    Private Sub Label4_Click_1(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label3_Click_1(sender As Object, e As EventArgs) Handles Label3.Click
-
+        FormatGridView(dgvAvailable)
+        FormatGridView(dgvRented)
+        LoadAvailableCars()
+        LoadRentedCars()
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -98,5 +71,13 @@
     Private Sub btnCustomerAcc_Click(sender As Object, e As EventArgs) Handles btnCustomerAcc.Click
         AdminCustomerAcc.Show()
         Me.Close()
+    End Sub
+
+    Private Sub dgvAvailable_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAvailable.CellContentClick
+
+    End Sub
+
+    Private Sub dgvRented_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRented.CellContentClick
+
     End Sub
 End Class

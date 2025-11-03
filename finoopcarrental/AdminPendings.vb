@@ -1,4 +1,6 @@
-﻿Public Class AdminPendings
+﻿Imports MySql.Data.MySqlClient
+Public Class AdminPendings
+    Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
@@ -37,6 +39,23 @@
     End Sub
 
     Private Sub AdminPendings_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadAvailableCars()
+    End Sub
 
+    Private Sub LoadAvailableCars()
+        lblAvailable.Text = ""
+        Try
+            Using conn As New MySqlConnection(connectionString)
+                conn.Open()
+                Dim query As String = "SELECT COUNT(*) FROM cars WHERE stock > 0"
+                Using cmd As New MySqlCommand(query, conn)
+                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    lblAvailable.Text = count.ToString()
+                End Using
+
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error loading available cars: " & ex.Message)
+        End Try
     End Sub
 End Class

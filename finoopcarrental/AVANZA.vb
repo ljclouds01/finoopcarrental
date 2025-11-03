@@ -5,6 +5,7 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnRent.Click
         SessionModule.selectedCarModel = "Toyota Avanza"
         SessionModule.selectedCarRate = 1500
+        SessionModule.selectedCarId = 4
 
         Dim rentalForm As New RentalForm()
         rentalForm.Show()

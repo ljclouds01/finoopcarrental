@@ -16,6 +16,7 @@ Public Class RentalForm
 
     End Sub
     Private Sub RentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Debug.WriteLine("Selected Car ID: " & SessionModule.selectedCarId)
         CaculateTotalCost()
         txtCustomersName.Text = SessionModule.LoggedInName
         txtContactNumber.Text = SessionModule.LoggedInContact
@@ -51,6 +52,7 @@ Public Class RentalForm
 
     Private Sub rentBtn_Click(sender As Object, e As EventArgs) Handles rentBtn.Click
 
+        Dim carID As Integer = SessionModule.selectedCarId
         Dim name As String = txtCustomersName.Text
         Dim contact As String = txtContactNumber.Text
         Dim address As String = txtAddress.Text
@@ -59,24 +61,16 @@ Public Class RentalForm
         Dim endDate As Date = dtpEndDate.Value.Date
         Dim price As Decimal = txtPrice.Text
         Dim totalCost As Decimal = txtTotalCost.Text
+        Dim status As String = "Rented"
 
         Try
             Using conn As New MySqlConnection(connectionString)
                 conn.Open()
-                'Dim checkQuery As String = "SELECT COUNT(*) FROM rental WHERE car_model = @car_model AND ((start_date <= @end_date AND end_date >= @start_date))"
-                'Using checkCmd As New MySqlCommand(checkQuery, conn)
-                '    checkCmd.Parameters.AddWithValue("@car_model", carModel)
-                '    checkCmd.Parameters.AddWithValue("@start_date", startDate)
-                '    checkCmd.Parameters.AddWithValue("@end_date", endDate)
-                '    Dim count As Integer = Convert.ToInt32(checkCmd.ExecuteScalar())
-                '    If count > 0 Then
-                '        MessageBox.Show("The selected car model is already rented for the chosen dates. Please select different dates or a different car model.", "Car Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                '        Return
-                '    End If
-                'End Using
+                Dim query As String = "INSERT INTO rental (car_id, customer_name, contact_number, address, car_model, start_date, end_date, price, total_cost, status)
+                       VALUES (@car_id, @customer_name, @contact_number, @address, @car_model, @start_date, @end_date, @price, @total_cost, @status)"
 
-                Dim query As String = "INSERT INTO rental (customer_name, contact_number, address, car_model, start_date, end_date, price, total_cost) VALUES (@customer_name, @contact_number, @address, @car_model, @start_date, @end_date, @price, @total_cost)"
                 Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@car_id", SessionModule.selectedCarId)
                     cmd.Parameters.AddWithValue("@customer_name", name)
                     cmd.Parameters.AddWithValue("@contact_number", contact)
                     cmd.Parameters.AddWithValue("@address", address)
@@ -85,12 +79,19 @@ Public Class RentalForm
                     cmd.Parameters.AddWithValue("@end_date", endDate)
                     cmd.Parameters.AddWithValue("@price", price)
                     cmd.Parameters.AddWithValue("@total_cost", totalCost)
+                    cmd.Parameters.AddWithValue("@status", status)
                     cmd.ExecuteNonQuery()
                 End Using
 
+                Dim updateQuery As String = "UPDATE cars set stock = stock - 1 where id = @id"
+                Using cmdUpdate As New MySqlCommand(updateQuery, conn)
+                    cmdUpdate.Parameters.AddWithValue("@id", SessionModule.selectedCarId)
+                    cmdUpdate.ExecuteNonQuery()
+                End Using
+
+
                 MessageBox.Show("Car rented successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Using
-
         Catch ex As Exception
             MessageBox.Show("Database Error: " & ex.Message)
         End Try

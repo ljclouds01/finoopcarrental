@@ -44,11 +44,13 @@ Partial Class AdminCustomerAcc
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.dgvUsers = New System.Windows.Forms.DataGridView()
         Me.pnlSideBar.SuspendLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCustomerAcc.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSideBar
@@ -194,6 +196,7 @@ Partial Class AdminCustomerAcc
         'pnlCustomerAcc
         '
         Me.pnlCustomerAcc.BackColor = System.Drawing.Color.RosyBrown
+        Me.pnlCustomerAcc.Controls.Add(Me.dgvUsers)
         Me.pnlCustomerAcc.Controls.Add(Me.Panel1)
         Me.pnlCustomerAcc.Location = New System.Drawing.Point(384, 113)
         Me.pnlCustomerAcc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -336,6 +339,17 @@ Partial Class AdminCustomerAcc
         Me.Label9.Text = "LICENSE NUMBER"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'dgvUsers
+        '
+        Me.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUsers.Location = New System.Drawing.Point(1, 70)
+        Me.dgvUsers.Name = "dgvUsers"
+        Me.dgvUsers.RowHeadersWidth = 51
+        Me.dgvUsers.RowTemplate.Height = 24
+        Me.dgvUsers.Size = New System.Drawing.Size(966, 390)
+        Me.dgvUsers.TabIndex = 1
+        '
         'AdminCustomerAcc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -355,6 +369,7 @@ Partial Class AdminCustomerAcc
         Me.pnlCustomerAcc.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -380,4 +395,5 @@ Partial Class AdminCustomerAcc
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents dgvUsers As DataGridView
 End Class

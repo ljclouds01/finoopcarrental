@@ -6,4 +6,5 @@
 
     Public selectedCarModel As String
     Public selectedCarRate As Decimal
+    Public selectedCarId As Integer
 End Module

@@ -47,7 +47,7 @@ Partial Class AdminPendings
         Me.btnRentedCars = New System.Windows.Forms.Button()
         Me.btnReservedCars = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblAvailable = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pnlPending.SuspendLayout()
@@ -365,17 +365,17 @@ Partial Class AdminPendings
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'Label3
+        'lblAvailable
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Gray
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(533, 114)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 81)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "0"
+        Me.lblAvailable.AutoSize = True
+        Me.lblAvailable.BackColor = System.Drawing.Color.Gray
+        Me.lblAvailable.Font = New System.Drawing.Font("Segoe UI Semibold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAvailable.Location = New System.Drawing.Point(533, 114)
+        Me.lblAvailable.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblAvailable.Name = "lblAvailable"
+        Me.lblAvailable.Size = New System.Drawing.Size(68, 81)
+        Me.lblAvailable.TabIndex = 17
+        Me.lblAvailable.Text = "0"
         '
         'Label4
         '
@@ -409,7 +409,7 @@ Partial Class AdminPendings
         Me.ClientSize = New System.Drawing.Size(1377, 763)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblAvailable)
         Me.Controls.Add(Me.btnRentedCars)
         Me.Controls.Add(Me.btnReservedCars)
         Me.Controls.Add(Me.btnAvailableCars)
@@ -453,7 +453,7 @@ Partial Class AdminPendings
     Friend WithEvents btnReservedCars As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblAvailable As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
 End Class
