@@ -150,6 +150,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarUtilities.vb" />
+    <Compile Include="CarHondaCivic.Designer.vb">
+      <DependentUpon>CarHondaCivic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarHondaCivic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarHondaCRV.Designer.vb">
+      <DependentUpon>CarHondaCRV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarHondaCRV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HondaFleet.Designer.vb">
       <DependentUpon>HondaFleet.vb</DependentUpon>
     </Compile>
@@ -168,11 +180,23 @@
     <Compile Include="KiaFleet.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CarLandCruiser.Designer.vb">
+      <DependentUpon>CarLandCruiser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarLandCruiser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarMercedesBenz.Designer.vb">
+      <DependentUpon>CarMercedesBenz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarMercedesBenz.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MercedesFleet.Designer.vb">
@@ -191,6 +215,12 @@
       <DependentUpon>MitsubishiFleet.vb</DependentUpon>
     </Compile>
     <Compile Include="MitsubishiFleet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarMonteroSport.Designer.vb">
+      <DependentUpon>CarMonteroSport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CarMonteroSport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -277,6 +307,12 @@
     <EmbeddedResource Include="AVANZA.resx">
       <DependentUpon>AVANZA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarHondaCivic.resx">
+      <DependentUpon>CarHondaCivic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarHondaCRV.resx">
+      <DependentUpon>CarHondaCRV.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HondaFleet.resx">
       <DependentUpon>HondaFleet.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,8 +322,14 @@
     <EmbeddedResource Include="KiaFleet.resx">
       <DependentUpon>KiaFleet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarLandCruiser.resx">
+      <DependentUpon>CarLandCruiser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarMercedesBenz.resx">
+      <DependentUpon>CarMercedesBenz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MercedesFleet.resx">
       <DependentUpon>MercedesFleet.vb</DependentUpon>
@@ -297,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MitsubishiFleet.resx">
       <DependentUpon>MitsubishiFleet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarMonteroSport.resx">
+      <DependentUpon>CarMonteroSport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

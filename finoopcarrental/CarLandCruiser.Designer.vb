@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class KIA
+Partial Class CarLandCruiser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,11 +22,10 @@ Partial Class KIA
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(KIA))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CarLandCruiser))
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnRent = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,7 +37,7 @@ Partial Class KIA
         Me.Button2.Location = New System.Drawing.Point(1082, 690)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(149, 38)
-        Me.Button2.TabIndex = 21
+        Me.Button2.TabIndex = 24
         Me.Button2.Text = "RESERVE"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -50,7 +49,7 @@ Partial Class KIA
         Me.btnRent.Location = New System.Drawing.Point(896, 690)
         Me.btnRent.Name = "btnRent"
         Me.btnRent.Size = New System.Drawing.Size(149, 38)
-        Me.btnRent.TabIndex = 20
+        Me.btnRent.TabIndex = 23
         Me.btnRent.Text = "RENT NOW"
         Me.btnRent.UseVisualStyleBackColor = False
         '
@@ -60,43 +59,28 @@ Partial Class KIA
         Me.PictureBox1.Location = New System.Drawing.Point(175, 130)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1177, 643)
-        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Transparent
-        Me.Button4.Location = New System.Drawing.Point(114, 28)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(66, 41)
-        Me.Button4.TabIndex = 31
-        Me.Button4.Text = "<"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'KIA
+        'LANDCRUISER
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1540, 845)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnRent)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "KIA"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "KIA"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Name = "LANDCRUISER"
+        Me.Text = "LANDCRUISER"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
     Friend WithEvents Button2 As Button
     Friend WithEvents btnRent As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button4 As Button
 End Class
