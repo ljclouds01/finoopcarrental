@@ -22,7 +22,7 @@ Partial Class ReservedForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.reserveBtn = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtStaffIncharge = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
@@ -33,7 +33,6 @@ Partial Class ReservedForm
         Me.lblEndDate = New System.Windows.Forms.Label()
         Me.lblStartDate = New System.Windows.Forms.Label()
         Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
-        Me.cmbCarModel = New System.Windows.Forms.ComboBox()
         Me.lblCarModel = New System.Windows.Forms.Label()
         Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.txtContactNumber = New System.Windows.Forms.TextBox()
@@ -43,17 +42,24 @@ Partial Class ReservedForm
         Me.lblCustomersName = New System.Windows.Forms.Label()
         Me.lblReservedForm = New System.Windows.Forms.Label()
         Me.exitBtn = New System.Windows.Forms.Button()
+        Me.txtCarModel = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtTotalCost = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtDownPayment = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'Button1
+        'reserveBtn
         '
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(423, 650)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(286, 41)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "Rent Now!"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.reserveBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.reserveBtn.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reserveBtn.ForeColor = System.Drawing.Color.White
+        Me.reserveBtn.Location = New System.Drawing.Point(423, 686)
+        Me.reserveBtn.Name = "reserveBtn"
+        Me.reserveBtn.Size = New System.Drawing.Size(286, 41)
+        Me.reserveBtn.TabIndex = 39
+        Me.reserveBtn.Text = "Reserve"
+        Me.reserveBtn.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -64,7 +70,7 @@ Partial Class ReservedForm
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(128, 23)
         Me.Label3.TabIndex = 38
-        Me.Label3.Text = "Satff In-Charge"
+        Me.Label3.Text = "Staff In-Charge"
         '
         'txtStaffIncharge
         '
@@ -86,6 +92,7 @@ Partial Class ReservedForm
         '
         Me.cmbModeofPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbModeofPayment.FormattingEnabled = True
+        Me.cmbModeofPayment.Items.AddRange(New Object() {"Cash", "Bank Transfer"})
         Me.cmbModeofPayment.Location = New System.Drawing.Point(423, 496)
         Me.cmbModeofPayment.Name = "cmbModeofPayment"
         Me.cmbModeofPayment.Size = New System.Drawing.Size(285, 36)
@@ -154,15 +161,6 @@ Partial Class ReservedForm
         Me.dtpStartDate.Name = "dtpStartDate"
         Me.dtpStartDate.Size = New System.Drawing.Size(285, 34)
         Me.dtpStartDate.TabIndex = 29
-        '
-        'cmbCarModel
-        '
-        Me.cmbCarModel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCarModel.FormattingEnabled = True
-        Me.cmbCarModel.Location = New System.Drawing.Point(73, 359)
-        Me.cmbCarModel.Name = "cmbCarModel"
-        Me.cmbCarModel.Size = New System.Drawing.Size(635, 36)
-        Me.cmbCarModel.TabIndex = 28
         '
         'lblCarModel
         '
@@ -253,14 +251,65 @@ Partial Class ReservedForm
         Me.exitBtn.Text = "X"
         Me.exitBtn.UseVisualStyleBackColor = True
         '
+        'txtCarModel
+        '
+        Me.txtCarModel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCarModel.Location = New System.Drawing.Point(70, 360)
+        Me.txtCarModel.Name = "txtCarModel"
+        Me.txtCarModel.Size = New System.Drawing.Size(639, 34)
+        Me.txtCarModel.TabIndex = 41
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(68, 613)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 23)
+        Me.Label4.TabIndex = 43
+        Me.Label4.Text = "Total Cost:"
+        '
+        'txtTotalCost
+        '
+        Me.txtTotalCost.Location = New System.Drawing.Point(70, 639)
+        Me.txtTotalCost.Multiline = True
+        Me.txtTotalCost.Name = "txtTotalCost"
+        Me.txtTotalCost.Size = New System.Drawing.Size(172, 30)
+        Me.txtTotalCost.TabIndex = 42
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(255, 613)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(132, 23)
+        Me.Label5.TabIndex = 45
+        Me.Label5.Text = "Down Payment:"
+        '
+        'txtDownPayment
+        '
+        Me.txtDownPayment.Location = New System.Drawing.Point(257, 639)
+        Me.txtDownPayment.Multiline = True
+        Me.txtDownPayment.Name = "txtDownPayment"
+        Me.txtDownPayment.Size = New System.Drawing.Size(172, 30)
+        Me.txtDownPayment.TabIndex = 44
+        '
         'ReservedForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Brown
         Me.ClientSize = New System.Drawing.Size(785, 748)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.txtDownPayment)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtTotalCost)
+        Me.Controls.Add(Me.txtCarModel)
         Me.Controls.Add(Me.exitBtn)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.reserveBtn)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtStaffIncharge)
         Me.Controls.Add(Me.txtPrice)
@@ -271,7 +320,6 @@ Partial Class ReservedForm
         Me.Controls.Add(Me.lblEndDate)
         Me.Controls.Add(Me.lblStartDate)
         Me.Controls.Add(Me.dtpStartDate)
-        Me.Controls.Add(Me.cmbCarModel)
         Me.Controls.Add(Me.lblCarModel)
         Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtContactNumber)
@@ -289,7 +337,7 @@ Partial Class ReservedForm
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents reserveBtn As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents txtStaffIncharge As TextBox
     Friend WithEvents txtPrice As TextBox
@@ -300,7 +348,6 @@ Partial Class ReservedForm
     Friend WithEvents lblEndDate As Label
     Friend WithEvents lblStartDate As Label
     Friend WithEvents dtpStartDate As DateTimePicker
-    Friend WithEvents cmbCarModel As ComboBox
     Friend WithEvents lblCarModel As Label
     Friend WithEvents txtAddress As TextBox
     Friend WithEvents txtContactNumber As TextBox
@@ -310,4 +357,9 @@ Partial Class ReservedForm
     Friend WithEvents lblCustomersName As Label
     Friend WithEvents lblReservedForm As Label
     Friend WithEvents exitBtn As Button
+    Friend WithEvents txtCarModel As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtTotalCost As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtDownPayment As TextBox
 End Class

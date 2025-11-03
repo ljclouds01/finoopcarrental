@@ -31,7 +31,11 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        ReservedForm.Show()
+        SessionModule.selectedCarModel = "Toyota Vios"
+        SessionModule.selectedCarRate = 1500
+
+        Dim reservedForm As New ReservedForm()
+        reservedForm.Show()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
