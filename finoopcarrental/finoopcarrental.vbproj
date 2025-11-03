@@ -150,10 +150,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarUtilities.vb" />
+    <Compile Include="HondaFleet.Designer.vb">
+      <DependentUpon>HondaFleet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HondaFleet.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="KIA.Designer.vb">
       <DependentUpon>KIA.vb</DependentUpon>
     </Compile>
     <Compile Include="KIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiaFleet.Designer.vb">
+      <DependentUpon>KiaFleet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KiaFleet.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.vb">
@@ -163,10 +175,22 @@
       <DependentUpon>LoginForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MercedesFleet.Designer.vb">
+      <DependentUpon>MercedesFleet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MercedesFleet.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MIRAGE.Designer.vb">
       <DependentUpon>MIRAGE.vb</DependentUpon>
     </Compile>
     <Compile Include="MIRAGE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MitsubishiFleet.Designer.vb">
+      <DependentUpon>MitsubishiFleet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MitsubishiFleet.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -209,6 +233,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SessionModule.vb" />
+    <Compile Include="Toyota.Designer.vb">
+      <DependentUpon>Toyota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Toyota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatedUserFleet2.Designer.vb">
+      <DependentUpon>UpdatedUserFleet2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatedUserFleet2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserDashboard.Designer.vb">
       <DependentUpon>UserDashboard.vb</DependentUpon>
     </Compile>
@@ -241,14 +277,26 @@
     <EmbeddedResource Include="AVANZA.resx">
       <DependentUpon>AVANZA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HondaFleet.resx">
+      <DependentUpon>HondaFleet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KIA.resx">
       <DependentUpon>KIA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiaFleet.resx">
+      <DependentUpon>KiaFleet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MercedesFleet.resx">
+      <DependentUpon>MercedesFleet.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MIRAGE.resx">
       <DependentUpon>MIRAGE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitsubishiFleet.resx">
+      <DependentUpon>MitsubishiFleet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -267,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReservedForm.resx">
       <DependentUpon>ReservedForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toyota.resx">
+      <DependentUpon>Toyota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatedUserFleet2.resx">
+      <DependentUpon>UpdatedUserFleet2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.vb</DependentUpon>
