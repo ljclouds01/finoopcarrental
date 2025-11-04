@@ -189,6 +189,7 @@ Partial Class RegistrationForm
         '
         'cmbSex
         '
+        Me.cmbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSex.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSex.FormattingEnabled = True
         Me.cmbSex.Items.AddRange(New Object() {"Male", "Female", "Other"})

@@ -23,12 +23,12 @@ Partial Class ForgotPassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtNewPassword = New System.Windows.Forms.TextBox()
-        Me.lblUsername = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.txtNewPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -48,25 +48,41 @@ Partial Class ForgotPassword
         Me.Panel1.Size = New System.Drawing.Size(465, 463)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'btnUpdate
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(75, 38)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(312, 41)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "FORGOT PASSWORD"
+        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.Color.Transparent
+        Me.btnUpdate.Location = New System.Drawing.Point(53, 363)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(364, 44)
+        Me.btnUpdate.TabIndex = 9
+        Me.btnUpdate.Text = "Change Password"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
-        'txtUsername
+        'Label2
         '
-        Me.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(53, 158)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(364, 38)
-        Me.txtUsername.TabIndex = 4
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(52, 219)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(101, 19)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "New Password"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.lblUsername.ForeColor = System.Drawing.Color.Transparent
+        Me.lblUsername.Location = New System.Drawing.Point(49, 137)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(71, 19)
+        Me.lblUsername.TabIndex = 3
+        Me.lblUsername.Text = "Username"
         '
         'txtNewPassword
         '
@@ -78,55 +94,48 @@ Partial Class ForgotPassword
         Me.txtNewPassword.Size = New System.Drawing.Size(364, 38)
         Me.txtNewPassword.TabIndex = 7
         '
-        'lblUsername
+        'txtUsername
         '
-        Me.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblUsername.AutoSize = True
-        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.lblUsername.ForeColor = System.Drawing.Color.Black
-        Me.lblUsername.Location = New System.Drawing.Point(49, 137)
-        Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(71, 19)
-        Me.lblUsername.TabIndex = 3
-        Me.lblUsername.Text = "Username"
+        Me.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Location = New System.Drawing.Point(53, 158)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(364, 38)
+        Me.txtUsername.TabIndex = 4
         '
-        'Label2
+        'Label1
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(52, 219)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 19)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "New Password"
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.Location = New System.Drawing.Point(53, 363)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(364, 44)
-        Me.btnUpdate.TabIndex = 9
-        Me.btnUpdate.Text = "Change Password"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(75, 38)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(312, 41)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "FORGOT PASSWORD"
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.ForeColor = System.Drawing.Color.Transparent
         Me.Button2.Location = New System.Drawing.Point(45, 24)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(106, 44)
         Me.Button2.TabIndex = 10
         Me.Button2.Text = "Back"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'ForgotPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Brown
         Me.ClientSize = New System.Drawing.Size(642, 630)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "ForgotPassword"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ForgotPassword"

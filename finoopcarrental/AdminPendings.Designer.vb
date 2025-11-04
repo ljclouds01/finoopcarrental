@@ -25,7 +25,14 @@ Partial Class AdminPendings
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminPendings))
         Me.pnlPending = New System.Windows.Forms.Panel()
+        Me.dgvPendings = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlSideBar = New System.Windows.Forms.Panel()
         Me.pbxLogo = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -41,18 +48,11 @@ Partial Class AdminPendings
         Me.lblAvailable = New System.Windows.Forms.Label()
         Me.lblRented = New System.Windows.Forms.Label()
         Me.lblReserved = New System.Windows.Forms.Label()
-        Me.dgvPendings = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.pnlPending.SuspendLayout()
+        CType(Me.dgvPendings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.pnlSideBar.SuspendLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvPendings, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlPending
@@ -65,6 +65,16 @@ Partial Class AdminPendings
         Me.pnlPending.Name = "pnlPending"
         Me.pnlPending.Size = New System.Drawing.Size(941, 420)
         Me.pnlPending.TabIndex = 12
+        '
+        'dgvPendings
+        '
+        Me.dgvPendings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPendings.Location = New System.Drawing.Point(1, 35)
+        Me.dgvPendings.Name = "dgvPendings"
+        Me.dgvPendings.RowHeadersWidth = 51
+        Me.dgvPendings.RowTemplate.Height = 24
+        Me.dgvPendings.Size = New System.Drawing.Size(940, 385)
+        Me.dgvPendings.TabIndex = 1
         '
         'Panel1
         '
@@ -80,6 +90,84 @@ Partial Class AdminPendings
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1085, 41)
         Me.Panel1.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(590, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(102, 25)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "END DATE"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(51, 7)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(171, 25)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "CUSTOMER NAME"
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label6.Location = New System.Drawing.Point(443, 7)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(117, 25)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "START DATE"
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label7.Location = New System.Drawing.Point(733, 7)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(98, 25)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "PAYMENT"
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label9.Location = New System.Drawing.Point(875, 7)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(76, 25)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "STATUS"
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(265, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(119, 25)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "CAR MODEL"
         '
         'pnlSideBar
         '
@@ -266,12 +354,13 @@ Partial Class AdminPendings
         Me.lblRented.AutoSize = True
         Me.lblRented.BackColor = System.Drawing.Color.Gray
         Me.lblRented.Font = New System.Drawing.Font("Segoe UI Semibold", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRented.Location = New System.Drawing.Point(840, 114)
+        Me.lblRented.Location = New System.Drawing.Point(835, 117)
         Me.lblRented.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRented.Name = "lblRented"
         Me.lblRented.Size = New System.Drawing.Size(68, 81)
         Me.lblRented.TabIndex = 18
         Me.lblRented.Text = "0"
+        Me.lblRented.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblReserved
         '
@@ -284,94 +373,6 @@ Partial Class AdminPendings
         Me.lblReserved.Size = New System.Drawing.Size(68, 81)
         Me.lblReserved.TabIndex = 19
         Me.lblReserved.Text = "0"
-        '
-        'dgvPendings
-        '
-        Me.dgvPendings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPendings.Location = New System.Drawing.Point(1, 35)
-        Me.dgvPendings.Name = "dgvPendings"
-        Me.dgvPendings.RowHeadersWidth = 51
-        Me.dgvPendings.RowTemplate.Height = 24
-        Me.dgvPendings.Size = New System.Drawing.Size(940, 385)
-        Me.dgvPendings.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(51, 7)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(171, 25)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "CUSTOMER NAME"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(265, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 25)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "CAR MODEL"
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(443, 7)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(117, 25)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "START DATE"
-        '
-        'Label7
-        '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(733, 7)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(98, 25)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "PAYMENT"
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label9.Location = New System.Drawing.Point(875, 7)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(76, 25)
-        Me.Label9.TabIndex = 13
-        Me.Label9.Text = "STATUS"
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(590, 7)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 25)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "END DATE"
         '
         'AdminPendings
         '
@@ -392,12 +393,12 @@ Partial Class AdminPendings
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pendings"
         Me.pnlPending.ResumeLayout(False)
+        CType(Me.dgvPendings, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.pnlSideBar.ResumeLayout(False)
         Me.pnlSideBar.PerformLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvPendings, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

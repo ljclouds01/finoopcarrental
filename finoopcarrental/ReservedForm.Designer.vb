@@ -90,6 +90,7 @@ Partial Class ReservedForm
         '
         'cmbModeofPayment
         '
+        Me.cmbModeofPayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbModeofPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbModeofPayment.FormattingEnabled = True
         Me.cmbModeofPayment.Items.AddRange(New Object() {"Cash", "Bank Transfer"})
@@ -137,9 +138,9 @@ Partial Class ReservedForm
         Me.lblEndDate.ForeColor = System.Drawing.Color.White
         Me.lblEndDate.Location = New System.Drawing.Point(416, 403)
         Me.lblEndDate.Name = "lblEndDate"
-        Me.lblEndDate.Size = New System.Drawing.Size(80, 23)
+        Me.lblEndDate.Size = New System.Drawing.Size(107, 23)
         Me.lblEndDate.TabIndex = 31
-        Me.lblEndDate.Text = "End Date"
+        Me.lblEndDate.Text = "Pick up Date"
         '
         'lblStartDate
         '
@@ -148,9 +149,9 @@ Partial Class ReservedForm
         Me.lblStartDate.ForeColor = System.Drawing.Color.White
         Me.lblStartDate.Location = New System.Drawing.Point(62, 403)
         Me.lblStartDate.Name = "lblStartDate"
-        Me.lblStartDate.Size = New System.Drawing.Size(87, 23)
+        Me.lblStartDate.Size = New System.Drawing.Size(142, 23)
         Me.lblStartDate.TabIndex = 30
-        Me.lblStartDate.Text = "Start Date"
+        Me.lblStartDate.Text = "Reservation Date"
         '
         'dtpStartDate
         '
@@ -275,6 +276,7 @@ Partial Class ReservedForm
         Me.txtTotalCost.Location = New System.Drawing.Point(70, 639)
         Me.txtTotalCost.Multiline = True
         Me.txtTotalCost.Name = "txtTotalCost"
+        Me.txtTotalCost.ReadOnly = True
         Me.txtTotalCost.Size = New System.Drawing.Size(172, 30)
         Me.txtTotalCost.TabIndex = 42
         '
@@ -294,6 +296,7 @@ Partial Class ReservedForm
         Me.txtDownPayment.Location = New System.Drawing.Point(257, 639)
         Me.txtDownPayment.Multiline = True
         Me.txtDownPayment.Name = "txtDownPayment"
+        Me.txtDownPayment.ReadOnly = True
         Me.txtDownPayment.Size = New System.Drawing.Size(172, 30)
         Me.txtDownPayment.TabIndex = 44
         '

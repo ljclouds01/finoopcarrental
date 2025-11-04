@@ -8,10 +8,6 @@ Public Class ReservedForm
         End If
 
         Dim days As Integer = (dtpEndDate.Value.Date - dtpStartDate.Value.Date).Days + 1
-        If days > 7 Then
-            txtTotalCost.Text = "Max 7 Days"
-            Exit Sub
-        End If
 
         Dim rate As Decimal
         Decimal.TryParse(txtPrice.Text, rate)

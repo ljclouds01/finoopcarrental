@@ -263,6 +263,7 @@ Partial Class RentalForm
         Me.txtTotalCost.Location = New System.Drawing.Point(71, 641)
         Me.txtTotalCost.Multiline = True
         Me.txtTotalCost.Name = "txtTotalCost"
+        Me.txtTotalCost.ReadOnly = True
         Me.txtTotalCost.Size = New System.Drawing.Size(172, 30)
         Me.txtTotalCost.TabIndex = 22
         '
