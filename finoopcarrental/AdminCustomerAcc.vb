@@ -3,15 +3,46 @@ Public Class AdminCustomerAcc
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Private Sub FormatGridView(dgv As DataGridView)
         With dgv
+            .ColumnHeadersVisible = False
+            .AutoGenerateColumns = False
             .RowHeadersVisible = False
-            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-            .AllowUserToAddRows = False
+            .Columns.Clear()
+            .BackgroundColor = Color.White
+            .BorderStyle = BorderStyle.None
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8)
+            .RowTemplate.Height = 35
             .ReadOnly = True
-            .MultiSelect = False
-            .ColumnHeadersDefaultCellStyle.BackColor = Color.Maroon
-            .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            .AllowUserToAddRows = False
+            .AllowUserToDeleteRows = False
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
+            .GridColor = Color.LightGray
+            .CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245)
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(240, 240, 240)
+            .DefaultCellStyle.SelectionForeColor = Color.Black
+
+            .DefaultCellStyle.Padding = New Padding(5)
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+
             .EnableHeadersVisualStyles = False
+
+            Dim columns As New List(Of DataGridViewColumn) From {
+            New DataGridViewTextBoxColumn() With {.Name = "NAME", .DataPropertyName = "name", .Width = 150},
+            New DataGridViewTextBoxColumn() With {.Name = "BIRTHDATE", .DataPropertyName = "birthday", .Width = 150},
+            New DataGridViewTextBoxColumn() With {.Name = "CONTACT NUMBER", .DataPropertyName = "contact_number", .Width = 150},
+            New DataGridViewTextBoxColumn() With {.Name = "SEX", .DataPropertyName = "sex", .Width = 80},
+            New DataGridViewTextBoxColumn() With {.Name = "ADDRESS", .DataPropertyName = "address", .Width = 80},
+            New DataGridViewTextBoxColumn() With {.Name = "LICENSE NUMBER", .DataPropertyName = "driver_license", .Width = 80},
+            New DataGridViewTextBoxColumn() With {.Name = "LICENSE EXPIRY DATE", .DataPropertyName = "license_expiry", .Width = 80},
+            New DataGridViewTextBoxColumn() With {.Name = "EMAIL", .DataPropertyName = "email", .Width = 80},
+            New DataGridViewTextBoxColumn() With {.Name = "USERNAME", .DataPropertyName = "username", .Width = 80}
+        }
+
+            For Each col In columns
+                .Columns.Add(col)
+            Next
         End With
     End Sub
     Private Sub Label6_Click(sender As Object, e As EventArgs)
@@ -48,7 +79,7 @@ Public Class AdminCustomerAcc
         Try
             Using conn As New MySqlConnection(connectionString)
                 conn.Open()
-                Dim query As String = "SELECT name AS 'Full Name', birthday AS 'Birth Date', contact_number AS 'Contact Number', sex AS 'Sex', address AS 'Address', driver_license AS 'Driver License', license_expiry AS 'License Expiry', email AS 'Email', Username AS 'Username' FROM users"
+                Dim query As String = "SELECT name, birthday, contact_number, sex, address, driver_license , license_expiry , email, username FROM users WHERE id != 1"
                 Using adapter As New MySqlDataAdapter(query, conn)
                     Dim table As New DataTable()
                     adapter.Fill(table)

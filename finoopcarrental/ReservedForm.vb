@@ -1,4 +1,6 @@
-﻿Public Class ReservedForm
+﻿Imports MySql.Data.MySqlClient
+Public Class ReservedForm
+    Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Private Sub CaculateTotalCost()
         If dtpEndDate.Value.Date < dtpStartDate.Value.Date Then
             txtTotalCost.Text = "Invalid"
@@ -6,6 +8,11 @@
         End If
 
         Dim days As Integer = (dtpEndDate.Value.Date - dtpStartDate.Value.Date).Days + 1
+        If days > 7 Then
+            txtTotalCost.Text = "Max 7 Days"
+            Exit Sub
+        End If
+
         Dim rate As Decimal
         Decimal.TryParse(txtPrice.Text, rate)
 
@@ -17,6 +24,10 @@
 
     End Sub
     Private Sub ReservedForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpEndDate.MinDate = DateTime.Today.AddDays(1)
+        dtpStartDate.MinDate = DateTime.Today
+        dtpEndDate.MaxDate = DateTime.Today.AddDays(7)
+
         CaculateTotalCost()
         txtCustomersName.Text = SessionModule.LoggedInName
         txtContactNumber.Text = SessionModule.LoggedInContact
@@ -39,13 +50,79 @@
 
     Private Sub dtpStartDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpStartDate.ValueChanged
         CaculateTotalCost()
+        Dim newMinDate As Date = dtpStartDate.Value.Date.AddDays(1)
+        Dim newMaxDate As Date = dtpStartDate.Value.Date.AddDays(7)
+
+        dtpEndDate.MaxDate = newMaxDate
+        dtpEndDate.MinDate = newMinDate
+
+        Dim newEndDate As Date = dtpStartDate.Value.Date.AddDays(7)
+        If newEndDate > dtpEndDate.MaxDate Then
+            newEndDate = dtpEndDate.MaxDate
+        End If
+        dtpEndDate.Value = newEndDate
     End Sub
 
     Private Sub dtpEndDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpEndDate.ValueChanged
         CaculateTotalCost()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
+    Private Sub reserveBtn_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
+        Dim carID As Integer = SessionModule.selectedCarId
+        Dim name As String = txtCustomersName.Text
+        Dim contact As String = txtContactNumber.Text
+        Dim address As String = txtAddress.Text
+        Dim carModel As String = txtCarModel.Text
+        Dim startDate As Date = dtpStartDate.Value.Date
+        Dim endDate As Date = dtpEndDate.Value.Date
+        Dim price As Decimal = txtPrice.Text
+        Dim downPayment As Decimal = txtDownPayment.Text
+        Dim payment As String = cmbModeofPayment.SelectedItem
+        Dim staff As String = txtStaffIncharge.Text
+        Dim totalCost As Decimal = txtTotalCost.Text
+        Dim status As String = "Reserved"
 
+        Try
+            Using conn As New MySqlConnection(connectionString)
+                If cmbModeofPayment.SelectedIndex = -1 Then
+                    MessageBox.Show("Please select a mode of payment.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
+                End If
+
+                conn.Open()
+                Dim query As String = "INSERT INTO rental (car_id, customer_name, contact_number, address, car_model, start_date, end_date, price, down_payment, payment_type, total_cost, status, staff)
+                       VALUES (@car_id, @customer_name, @contact_number, @address, @car_model, @start_date, @end_date, @price, @down_payment, @payment_type, @total_cost, @status, @staff)"
+
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@car_id", SessionModule.selectedCarId)
+                    cmd.Parameters.AddWithValue("@customer_name", name)
+                    cmd.Parameters.AddWithValue("@contact_number", contact)
+                    cmd.Parameters.AddWithValue("@address", address)
+                    cmd.Parameters.AddWithValue("@car_model", carModel)
+                    cmd.Parameters.AddWithValue("@start_date", startDate)
+                    cmd.Parameters.AddWithValue("@end_date", endDate)
+                    cmd.Parameters.AddWithValue("@price", price)
+                    cmd.Parameters.AddWithValue("@down_payment", downPayment)
+                    cmd.Parameters.AddWithValue("@payment_type", payment)
+                    cmd.Parameters.AddWithValue("@total_cost", totalCost)
+                    cmd.Parameters.AddWithValue("@status", status)
+                    cmd.Parameters.AddWithValue("@staff", staff)
+                    cmd.ExecuteNonQuery()
+                End Using
+
+                Dim updateQuery As String = "UPDATE cars set stock = stock - 1 where id = @id"
+                Using cmdUpdate As New MySqlCommand(updateQuery, conn)
+                    cmdUpdate.Parameters.AddWithValue("@id", SessionModule.selectedCarId)
+                    cmdUpdate.ExecuteNonQuery()
+                End Using
+
+
+                MessageBox.Show("Car rented successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                OnCarRented()
+                Me.Close()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Database Error: " & ex.Message)
+        End Try
     End Sub
 End Class

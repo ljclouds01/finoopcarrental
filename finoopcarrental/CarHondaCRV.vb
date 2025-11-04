@@ -24,9 +24,19 @@
     Private Sub RefreshCarAvailability()
         Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
         CheckCarAvailability(connectionString, "Honda CRV", btnRent)
+        CheckCarAvailabilityReserved(connectionString, "Honda CRV", reserveBtn)
     End Sub
 
     Private Sub CarHondaCRV_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         RemoveHandler CarRented, AddressOf CarRented_Handler
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
+        SessionModule.selectedCarModel = "Honda CRV"
+        SessionModule.selectedCarRate = 4000
+        SessionModule.selectedCarId = 7
+
+        Dim reservationForm As New ReservedForm()
+        reservationForm.Show()
     End Sub
 End Class

@@ -31,7 +31,7 @@
         rentalForm.Show()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
         SessionModule.selectedCarModel = "Toyota Vios"
         SessionModule.selectedCarRate = 1800
         SessionModule.selectedCarId = 1
@@ -60,6 +60,7 @@
     Private Sub RefreshCarAvailability()
         Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
         CheckCarAvailability(connectionString, "Toyota Vios", btnRent)
+        CheckCarAvailabilityReserved(connectionString, "Toyota Vios", reserveBtn)
     End Sub
 
     Private Sub Vios_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

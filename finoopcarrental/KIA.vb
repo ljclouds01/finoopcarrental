@@ -18,6 +18,7 @@
     Private Sub RefreshCarAvailability()
         Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
         CheckCarAvailability(connectionString, "Kia EV9", btnRent)
+        CheckCarAvailabilityReserved(connectionString, "Kia EV9", reserveBtn)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnRent.Click
@@ -29,8 +30,13 @@
         rentalForm.Show()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        ReservedForm.Show()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
+        SessionModule.selectedCarModel = "Kia EV9"
+        SessionModule.selectedCarRate = 5000
+        SessionModule.selectedCarId = 3
+
+        Dim reservationForm As New ReservedForm()
+        reservationForm.Show()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

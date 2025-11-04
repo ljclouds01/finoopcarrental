@@ -23,25 +23,25 @@ Partial Class CarHondaCivic
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CarHondaCivic))
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.reserveBtn = New System.Windows.Forms.Button()
         Me.btnRent = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button2
+        'reserveBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1443, 849)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(199, 47)
-        Me.Button2.TabIndex = 27
-        Me.Button2.Text = "RESERVE"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.reserveBtn.BackColor = System.Drawing.Color.White
+        Me.reserveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.reserveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reserveBtn.Location = New System.Drawing.Point(1443, 849)
+        Me.reserveBtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.reserveBtn.Name = "reserveBtn"
+        Me.reserveBtn.Size = New System.Drawing.Size(199, 47)
+        Me.reserveBtn.TabIndex = 27
+        Me.reserveBtn.Text = "RESERVE"
+        Me.reserveBtn.UseVisualStyleBackColor = False
         '
         'btnRent
         '
@@ -49,7 +49,7 @@ Partial Class CarHondaCivic
         Me.btnRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnRent.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRent.Location = New System.Drawing.Point(1195, 849)
-        Me.btnRent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRent.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRent.Name = "btnRent"
         Me.btnRent.Size = New System.Drawing.Size(199, 47)
         Me.btnRent.TabIndex = 26
@@ -60,7 +60,7 @@ Partial Class CarHondaCivic
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(233, 160)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1569, 791)
         Me.PictureBox1.TabIndex = 25
@@ -88,10 +88,10 @@ Partial Class CarHondaCivic
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1924, 1040)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.reserveBtn)
         Me.Controls.Add(Me.btnRent)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "CarHondaCivic"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HondaCivic"
@@ -101,7 +101,7 @@ Partial Class CarHondaCivic
 
     End Sub
 
-    Friend WithEvents Button2 As Button
+    Friend WithEvents reserveBtn As Button
     Friend WithEvents btnRent As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button

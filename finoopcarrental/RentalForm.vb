@@ -2,7 +2,7 @@
 Public Class RentalForm
     Dim connectionString As String = "server=localhost;userid=root;password=;database=car_rental"
     Private Sub CaculateTotalCost()
-        If dtpEndDate.Value.Date < dtpStartDate.Value.Date Then
+        If dtpEndDate.Value.Date <= dtpStartDate.Value.Date Then
             txtTotalCost.Text = "Invalid"
             Exit Sub
         End If
@@ -16,6 +16,8 @@ Public Class RentalForm
 
     End Sub
     Private Sub RentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dtpEndDate.MinDate = DateTime.Today.AddDays(1)
+        dtpStartDate.MinDate = DateTime.Today
         CaculateTotalCost()
         txtCustomersName.Text = SessionModule.LoggedInName
         txtContactNumber.Text = SessionModule.LoggedInContact
@@ -58,14 +60,21 @@ Public Class RentalForm
         Dim startDate As Date = dtpStartDate.Value.Date
         Dim endDate As Date = dtpEndDate.Value.Date
         Dim price As Decimal = txtPrice.Text
+        Dim payment As String = cmbModeofPayment.SelectedItem
+        Dim staff As String = txtStaffIncharge.Text
         Dim totalCost As Decimal = txtTotalCost.Text
         Dim status As String = "Rented"
 
         Try
             Using conn As New MySqlConnection(connectionString)
+                If cmbModeofPayment.SelectedIndex = -1 Then
+                    MessageBox.Show("Please select a mode of payment.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
+                End If
+
                 conn.Open()
-                Dim query As String = "INSERT INTO rental (car_id, customer_name, contact_number, address, car_model, start_date, end_date, price, total_cost, status)
-                       VALUES (@car_id, @customer_name, @contact_number, @address, @car_model, @start_date, @end_date, @price, @total_cost, @status)"
+                Dim query As String = "INSERT INTO rental (car_id, customer_name, contact_number, address, car_model, start_date, end_date, price, payment_type, total_cost, status, staff)
+                       VALUES (@car_id, @customer_name, @contact_number, @address, @car_model, @start_date, @end_date, @price, @payment_type, @total_cost, @status, @staff)"
 
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@car_id", SessionModule.selectedCarId)
@@ -76,8 +85,10 @@ Public Class RentalForm
                     cmd.Parameters.AddWithValue("@start_date", startDate)
                     cmd.Parameters.AddWithValue("@end_date", endDate)
                     cmd.Parameters.AddWithValue("@price", price)
+                    cmd.Parameters.AddWithValue("@payment_type", payment)
                     cmd.Parameters.AddWithValue("@total_cost", totalCost)
                     cmd.Parameters.AddWithValue("@status", status)
+                    cmd.Parameters.AddWithValue("@staff", staff)
                     cmd.ExecuteNonQuery()
                 End Using
 
@@ -95,5 +106,9 @@ Public Class RentalForm
         Catch ex As Exception
             MessageBox.Show("Database Error: " & ex.Message)
         End Try
+    End Sub
+
+    Private Sub cmbModeofPayment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModeofPayment.SelectedIndexChanged
+
     End Sub
 End Class

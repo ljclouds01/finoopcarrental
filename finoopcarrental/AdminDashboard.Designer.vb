@@ -31,8 +31,6 @@ Partial Class AdminDashboard
         Me.btnPending = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
-        Me.pbProfile = New System.Windows.Forms.PictureBox()
-        Me.lblAdminID = New System.Windows.Forms.Label()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.lblHere = New System.Windows.Forms.Label()
         Me.btnAvailableCars = New System.Windows.Forms.Button()
@@ -43,6 +41,7 @@ Partial Class AdminDashboard
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.dgvRented = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -54,18 +53,18 @@ Partial Class AdminDashboard
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.dgvRented = New System.Windows.Forms.DataGridView()
+        Me.dgvReserved = New System.Windows.Forms.DataGridView()
         Me.pnlSideBar.SuspendLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvAvailable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.dgvRented, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.dgvRented, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSideBar
@@ -80,8 +79,6 @@ Partial Class AdminDashboard
         Me.pnlSideBar.Controls.Add(Me.btnPending)
         Me.pnlSideBar.Controls.Add(Me.btnLogout)
         Me.pnlSideBar.Controls.Add(Me.btnDashboard)
-        Me.pnlSideBar.Controls.Add(Me.pbProfile)
-        Me.pnlSideBar.Controls.Add(Me.lblAdminID)
         Me.pnlSideBar.ForeColor = System.Drawing.Color.White
         Me.pnlSideBar.Location = New System.Drawing.Point(-1, 1)
         Me.pnlSideBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -134,7 +131,7 @@ Partial Class AdminDashboard
         Me.btnCustomerAcc.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCustomerAcc.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCustomerAcc.ForeColor = System.Drawing.Color.White
-        Me.btnCustomerAcc.Location = New System.Drawing.Point(0, 391)
+        Me.btnCustomerAcc.Location = New System.Drawing.Point(-1, 280)
         Me.btnCustomerAcc.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCustomerAcc.Name = "btnCustomerAcc"
         Me.btnCustomerAcc.Size = New System.Drawing.Size(360, 66)
@@ -149,7 +146,7 @@ Partial Class AdminDashboard
         Me.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPending.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPending.ForeColor = System.Drawing.Color.White
-        Me.btnPending.Location = New System.Drawing.Point(0, 324)
+        Me.btnPending.Location = New System.Drawing.Point(-1, 213)
         Me.btnPending.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPending.Name = "btnPending"
         Me.btnPending.Size = New System.Drawing.Size(360, 75)
@@ -178,7 +175,7 @@ Partial Class AdminDashboard
         Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDashboard.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDashboard.ForeColor = System.Drawing.Color.White
-        Me.btnDashboard.Location = New System.Drawing.Point(0, 244)
+        Me.btnDashboard.Location = New System.Drawing.Point(-1, 133)
         Me.btnDashboard.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDashboard.Name = "btnDashboard"
         Me.btnDashboard.Size = New System.Drawing.Size(360, 82)
@@ -186,27 +183,6 @@ Partial Class AdminDashboard
         Me.btnDashboard.Text = "  DASHBOARD"
         Me.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDashboard.UseVisualStyleBackColor = False
-        '
-        'pbProfile
-        '
-        Me.pbProfile.BackColor = System.Drawing.Color.White
-        Me.pbProfile.Location = New System.Drawing.Point(31, 135)
-        Me.pbProfile.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pbProfile.Name = "pbProfile"
-        Me.pbProfile.Size = New System.Drawing.Size(71, 69)
-        Me.pbProfile.TabIndex = 5
-        Me.pbProfile.TabStop = False
-        '
-        'lblAdminID
-        '
-        Me.lblAdminID.AutoSize = True
-        Me.lblAdminID.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.lblAdminID.ForeColor = System.Drawing.Color.White
-        Me.lblAdminID.Location = New System.Drawing.Point(120, 167)
-        Me.lblAdminID.Name = "lblAdminID"
-        Me.lblAdminID.Size = New System.Drawing.Size(205, 37)
-        Me.lblAdminID.TabIndex = 4
-        Me.lblAdminID.Text = "ADMIN ID         "
         '
         'lblWelcome
         '
@@ -225,7 +201,7 @@ Partial Class AdminDashboard
         Me.lblHere.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblHere.AutoSize = True
         Me.lblHere.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.lblHere.Location = New System.Drawing.Point(395, 82)
+        Me.lblHere.Location = New System.Drawing.Point(416, 82)
         Me.lblHere.Name = "lblHere"
         Me.lblHere.Size = New System.Drawing.Size(410, 25)
         Me.lblHere.TabIndex = 6
@@ -259,14 +235,14 @@ Partial Class AdminDashboard
         '
         'dgvAvailable
         '
-        Me.dgvAvailable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvAvailable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAvailable.Location = New System.Drawing.Point(0, 0)
+        Me.dgvAvailable.Location = New System.Drawing.Point(0, 31)
         Me.dgvAvailable.Name = "dgvAvailable"
         Me.dgvAvailable.RowHeadersVisible = False
         Me.dgvAvailable.RowHeadersWidth = 51
         Me.dgvAvailable.RowTemplate.Height = 24
-        Me.dgvAvailable.Size = New System.Drawing.Size(252, 265)
+        Me.dgvAvailable.Size = New System.Drawing.Size(252, 234)
         Me.dgvAvailable.TabIndex = 15
         '
         'Panel2
@@ -332,6 +308,18 @@ Partial Class AdminDashboard
         Me.Panel3.Size = New System.Drawing.Size(252, 265)
         Me.Panel3.TabIndex = 16
         '
+        'dgvRented
+        '
+        Me.dgvRented.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvRented.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRented.Location = New System.Drawing.Point(0, 31)
+        Me.dgvRented.Name = "dgvRented"
+        Me.dgvRented.RowHeadersVisible = False
+        Me.dgvRented.RowHeadersWidth = 51
+        Me.dgvRented.RowTemplate.Height = 24
+        Me.dgvRented.Size = New System.Drawing.Size(252, 234)
+        Me.dgvRented.TabIndex = 16
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -387,6 +375,7 @@ Partial Class AdminDashboard
         '
         Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel5.BackColor = System.Drawing.Color.RosyBrown
+        Me.Panel5.Controls.Add(Me.dgvReserved)
         Me.Panel5.Controls.Add(Me.Panel6)
         Me.Panel5.Location = New System.Drawing.Point(1008, 374)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -473,17 +462,17 @@ Partial Class AdminDashboard
         Me.Button5.Text = "Reserved Cars"
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'dgvRented
+        'dgvReserved
         '
-        Me.dgvRented.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvRented.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRented.Location = New System.Drawing.Point(0, 0)
-        Me.dgvRented.Name = "dgvRented"
-        Me.dgvRented.RowHeadersVisible = False
-        Me.dgvRented.RowHeadersWidth = 51
-        Me.dgvRented.RowTemplate.Height = 24
-        Me.dgvRented.Size = New System.Drawing.Size(252, 265)
-        Me.dgvRented.TabIndex = 16
+        Me.dgvReserved.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvReserved.Location = New System.Drawing.Point(0, 31)
+        Me.dgvReserved.Name = "dgvReserved"
+        Me.dgvReserved.RowHeadersVisible = False
+        Me.dgvReserved.RowHeadersWidth = 51
+        Me.dgvReserved.RowTemplate.Height = 24
+        Me.dgvReserved.Size = New System.Drawing.Size(252, 234)
+        Me.dgvReserved.TabIndex = 17
         '
         'AdminDashboard
         '
@@ -507,26 +496,24 @@ Partial Class AdminDashboard
         Me.pnlSideBar.ResumeLayout(False)
         Me.pnlSideBar.PerformLayout()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.dgvAvailable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
+        CType(Me.dgvRented, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.dgvRented, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvReserved, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents pnlSideBar As Panel
-    Friend WithEvents lblAdminID As Label
-    Friend WithEvents pbProfile As PictureBox
     Friend WithEvents lblWelcome As Label
     Friend WithEvents lblHere As Label
     Friend WithEvents btnDashboard As Button
@@ -556,4 +543,5 @@ Partial Class AdminDashboard
     Friend WithEvents Button5 As Button
     Friend WithEvents dgvAvailable As DataGridView
     Friend WithEvents dgvRented As DataGridView
+    Friend WithEvents dgvReserved As DataGridView
 End Class

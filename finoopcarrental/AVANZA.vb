@@ -17,8 +17,13 @@
         rentalForm.Show()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        ReservedForm.Show()
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
+        SessionModule.selectedCarModel = "Toyota Avanza"
+        SessionModule.selectedCarRate = 3000
+        SessionModule.selectedCarId = 4
+
+        Dim reservationForm As New ReservedForm()
+        reservationForm.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -32,6 +37,7 @@
     Private Sub RefreshCarAvailability()
         Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
         CheckCarAvailability(connectionString, "Toyota Avanza", btnRent)
+        CheckCarAvailabilityReserved(connectionString, "Toyota Avanza", reserveBtn)
     End Sub
     Private Sub AVANZA_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         RemoveHandler CarRented, AddressOf CarRented_Handler

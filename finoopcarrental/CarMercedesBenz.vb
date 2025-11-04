@@ -24,9 +24,19 @@
     Private Sub RefreshCarAvailability()
         Dim connectionString As String = "server=localhost;user id=root;password=;database=car_rental"
         CheckCarAvailability(connectionString, "Mercedes Benz C", btnRent)
+        CheckCarAvailabilityReserved(connectionString, "Mercedes Benz C", reserveBtn)
     End Sub
 
     Private Sub MercedesBenz_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         RemoveHandler CarRented, AddressOf CarRented_Handler
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles reserveBtn.Click
+        SessionModule.selectedCarModel = "Mercedes Benz C"
+        SessionModule.selectedCarRate = 4000
+        SessionModule.selectedCarId = 9
+
+        Dim reservationForm As New ReservedForm()
+        reservationForm.Show()
     End Sub
 End Class
