@@ -16,7 +16,6 @@ Public Class RentalForm
 
     End Sub
     Private Sub RentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Debug.WriteLine("Selected Car ID: " & SessionModule.selectedCarId)
         CaculateTotalCost()
         txtCustomersName.Text = SessionModule.LoggedInName
         txtContactNumber.Text = SessionModule.LoggedInContact
@@ -51,7 +50,6 @@ Public Class RentalForm
     End Sub
 
     Private Sub rentBtn_Click(sender As Object, e As EventArgs) Handles rentBtn.Click
-
         Dim carID As Integer = SessionModule.selectedCarId
         Dim name As String = txtCustomersName.Text
         Dim contact As String = txtContactNumber.Text
@@ -91,6 +89,8 @@ Public Class RentalForm
 
 
                 MessageBox.Show("Car rented successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                OnCarRented()
+                Me.Close()
             End Using
         Catch ex As Exception
             MessageBox.Show("Database Error: " & ex.Message)

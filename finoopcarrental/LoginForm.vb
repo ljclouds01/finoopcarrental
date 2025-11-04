@@ -60,7 +60,7 @@ Public Class LoginForm
                 conn.Open()
 
                 Dim query As String = "
-                SELECT u.name, u.contact_number, u.address, u.role, l.password 
+                SELECT u.id, u.name, u.contact_number, u.address, u.role, l.password 
                 FROM users u
                 INNER JOIN login_info l ON u.username = l.username
                 WHERE l.username = @username
@@ -74,6 +74,7 @@ Public Class LoginForm
                             Dim storedHash As String = reader("password").ToString()
                             Dim fullName As String = reader("name").ToString()
                             Dim role As String = reader("role").ToString().ToLower()
+                            SessionModule.LoggedInUserId = reader.GetInt32("id")
 
                             If BCrypt.Net.BCrypt.Verify(password, storedHash) Then
                                 MessageBox.Show("Welcome, " & fullName & "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -87,7 +88,7 @@ Public Class LoginForm
                                     SessionModule.LoggedInAddress = reader("address").ToString()
                                     SessionModule.LoggedInRole = role
 
-                                    Dim dashboard As New UserDashboard()
+                                    Dim dashboard As New UpdatedUserFleet2()
                                     dashboard.Show()
                                     Me.Hide()
                                 Else

@@ -3,6 +3,7 @@
     Public LoggedInContact As String
     Public LoggedInAddress As String
     Public LoggedInRole As String
+    Public LoggedInUserId As Integer = 0
 
     Public selectedCarModel As String
     Public selectedCarRate As Decimal

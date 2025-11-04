@@ -23,7 +23,7 @@ Module CarUtilities
                         rentBtn.Text = "Out of Stock"
                     Else
                         rentBtn.Enabled = True
-                        rentBtn.BackColor = Color.FromArgb(26, 115, 232)
+                        rentBtn.BackColor = Color.LightGreen
                         rentBtn.Text = "Rent Now!"
                     End If
                 End Using
@@ -31,6 +31,30 @@ Module CarUtilities
         Catch ex As Exception
             MessageBox.Show("Error checking availability: " & ex.Message)
         End Try
+    End Sub
+
+    Public Sub RefreshAllCarAvailability(connStr As String)
+        Dim carForms As New Dictionary(Of String, Button) From {
+            {"Toyota Vios", Vios.btnRent},
+            {"Mitsubishi Mirage", MIRAGE.btnRent},
+            {"Kia EV9", KIA.btnRent},
+            {"Toyota Avanza", AVANZA.btnRent},
+            {"Toyota Land Cruiser", CarLandCruiser.btnRent},
+            {"Honda Civic", CarHondaCivic.btnRent},
+            {"Honda CRV", CarHondaCRV.btnRent},
+            {"Montero Sport", CarMonteroSport.btnRent},
+            {"Mercedes Benz C", MercedesBenz.btnRent}
+        }
+
+        For Each car In carForms
+            CheckCarAvailability(connStr, car.Key, car.Value)
+        Next
+    End Sub
+
+    Public Event CarRented As EventHandler
+
+    Public Sub OnCarRented()
+        RaiseEvent CarRented(Nothing, EventArgs.Empty)
     End Sub
 End Module
 

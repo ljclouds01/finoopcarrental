@@ -33,9 +33,10 @@ Partial Class AVANZA
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(175, 130)
+        Me.PictureBox1.Location = New System.Drawing.Point(233, 160)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1177, 643)
+        Me.PictureBox1.Size = New System.Drawing.Size(1569, 791)
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
         '
@@ -44,9 +45,10 @@ Partial Class AVANZA
         Me.Button4.BackColor = System.Drawing.Color.White
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(1082, 690)
+        Me.Button4.Location = New System.Drawing.Point(1443, 849)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(149, 38)
+        Me.Button4.Size = New System.Drawing.Size(199, 47)
         Me.Button4.TabIndex = 32
         Me.Button4.Text = "RESERVE"
         Me.Button4.UseVisualStyleBackColor = False
@@ -56,37 +58,40 @@ Partial Class AVANZA
         Me.btnRent.BackColor = System.Drawing.Color.White
         Me.btnRent.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnRent.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRent.Location = New System.Drawing.Point(896, 690)
+        Me.btnRent.Location = New System.Drawing.Point(1195, 849)
+        Me.btnRent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnRent.Name = "btnRent"
-        Me.btnRent.Size = New System.Drawing.Size(149, 38)
+        Me.btnRent.Size = New System.Drawing.Size(199, 47)
         Me.btnRent.TabIndex = 31
         Me.btnRent.Text = "RENT NOW"
         Me.btnRent.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackColor = System.Drawing.Color.Brown
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(114, 28)
+        Me.Button1.Location = New System.Drawing.Point(152, 34)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(66, 41)
+        Me.Button1.Size = New System.Drawing.Size(88, 50)
         Me.Button1.TabIndex = 34
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'AVANZA
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1540, 845)
+        Me.ClientSize = New System.Drawing.Size(1924, 1040)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.btnRent)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "AVANZA"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AVANZA"
