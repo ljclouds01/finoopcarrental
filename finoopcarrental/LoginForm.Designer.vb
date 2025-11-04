@@ -26,6 +26,7 @@ Partial Class LoginForm
         Me.lblCarRental = New System.Windows.Forms.Label()
         Me.pbxLogo = New System.Windows.Forms.PictureBox()
         Me.pnlLogin = New System.Windows.Forms.Panel()
+        Me.picShowHide = New System.Windows.Forms.PictureBox()
         Me.lnkRegister = New System.Windows.Forms.LinkLabel()
         Me.lblDont = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -35,7 +36,6 @@ Partial Class LoginForm
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblLogin = New System.Windows.Forms.Label()
-        Me.picShowHide = New System.Windows.Forms.PictureBox()
         CType(Me.pbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlLogin.SuspendLayout()
         CType(Me.picShowHide, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +85,17 @@ Partial Class LoginForm
         Me.pnlLogin.Name = "pnlLogin"
         Me.pnlLogin.Size = New System.Drawing.Size(719, 536)
         Me.pnlLogin.TabIndex = 2
+        '
+        'picShowHide
+        '
+        Me.picShowHide.BackColor = System.Drawing.Color.White
+        Me.picShowHide.Image = Global.finoopcarrental.My.Resources.Resources.eye_open
+        Me.picShowHide.Location = New System.Drawing.Point(597, 239)
+        Me.picShowHide.Name = "picShowHide"
+        Me.picShowHide.Size = New System.Drawing.Size(51, 35)
+        Me.picShowHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picShowHide.TabIndex = 10
+        Me.picShowHide.TabStop = False
         '
         'lnkRegister
         '
@@ -192,17 +203,6 @@ Partial Class LoginForm
         Me.lblLogin.TabIndex = 1
         Me.lblLogin.Text = "User Login"
         Me.lblLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'picShowHide
-        '
-        Me.picShowHide.BackColor = System.Drawing.Color.White
-        Me.picShowHide.Image = Global.finoopcarrental.My.Resources.Resources.eye_open
-        Me.picShowHide.Location = New System.Drawing.Point(597, 239)
-        Me.picShowHide.Name = "picShowHide"
-        Me.picShowHide.Size = New System.Drawing.Size(51, 35)
-        Me.picShowHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.picShowHide.TabIndex = 10
-        Me.picShowHide.TabStop = False
         '
         'LoginForm
         '

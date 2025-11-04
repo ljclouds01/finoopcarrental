@@ -162,6 +162,12 @@
     <Compile Include="CarHondaCRV.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HondaFleet.Designer.vb">
       <DependentUpon>HondaFleet.vb</DependentUpon>
     </Compile>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CarHondaCRV.resx">
       <DependentUpon>CarHondaCRV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HondaFleet.resx">
       <DependentUpon>HondaFleet.vb</DependentUpon>

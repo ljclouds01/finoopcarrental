@@ -164,4 +164,8 @@ Public Class LoginForm
             showPass = True
         End If
     End Sub
+
+    Private Sub btnForgotPassword_Click(sender As Object, e As EventArgs) Handles btnForgotPassword.Click
+        ForgotPassword.ShowDialog()
+    End Sub
 End Class
